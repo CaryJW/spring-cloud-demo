@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka-server-7000" />
+        <module name="spring-boot-admin-client-7002" />
+        <module name="spring-boot-admin-client-7003" />
+        <module name="spring-boot-admin-consumer-7010" />
+        <module name="spring-boot-admin-feign-7011" />
+        <module name="spring-boot-admin-server-7001" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eureka-server-7000" target="1.8" />
+      <module name="spring-boot-admin-client-7002" target="1.8" />
+      <module name="spring-boot-admin-client-7003" target="1.8" />
+      <module name="spring-boot-admin-consumer-7010" target="1.8" />
+      <module name="spring-boot-admin-feign-7011" target="1.8" />
+      <module name="spring-boot-admin-server-7001" target="1.8" />
+      <module name="SpringBootAdminDemo" target="1.8" />
+      <module name="SpringCloudAdminDemo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
