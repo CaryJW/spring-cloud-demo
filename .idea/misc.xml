@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/spring-boot-admin-client-7003/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-admin-consumer-7010/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-admin-feign-7011/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin-zuul-7012/pom.xml" />
       </list>
     </option>
   </component>

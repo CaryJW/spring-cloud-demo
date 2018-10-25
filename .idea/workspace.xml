@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="82429921-e581-4703-bb53-b7920b00db42" name="Default" comment="" />
+    <list default="true" id="82429921-e581-4703-bb53-b7920b00db42" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/resources/application.yml" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-admin-feign-7011/pom.xml" afterPath="$PROJECT_DIR$/spring-boot-admin-feign-7011/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/resources/application.yml" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-admin-feign-7011/src/test/java/com/flyxiaozhu/springbootadminfeign/SpringBootAdminFeignApplicationTests.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-admin-server-7001/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/spring-boot-admin-server-7001/src/main/resources/application.properties" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/spring-boot-admin-server-7001/target/" />
@@ -10,6 +22,7 @@
     <ignored path="$PROJECT_DIR$/spring-boot-admin-client-7003/target/" />
     <ignored path="$PROJECT_DIR$/spring-boot-admin-consumer-7010/target/" />
     <ignored path="$PROJECT_DIR$/spring-boot-admin-feign-7011/target/" />
+    <ignored path="$PROJECT_DIR$/spring-boot-admin-zuul-7012/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +32,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="SpringBootAdminFeignApplication.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/java/com/flyxiaozhu/springbootadminfeign/SpringBootAdminFeignApplication.java">
+      <file leaf-file-name="HiController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/java/com/flyxiaozhu/springbootadminfeign/controller/HiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <state relative-caret-position="220">
+              <caret line="15" column="71" lean-forward="false" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -34,6 +47,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -45,6 +59,7 @@
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -59,7 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server-7000/pom.xml" />
         <option value="$PROJECT_DIR$/eureka-server-7000/src/main/java/com/flyxiaozhu/eurekaserver/EurekaServerApplication.java" />
         <option value="$PROJECT_DIR$/spring-boot-admin-client-7002/pom.xml" />
@@ -68,18 +82,27 @@
         <option value="$PROJECT_DIR$/spring-boot-admin-client-7003/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-admin-client-7003/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/java/com/flyxiaozhu/springbootadminconsumer/SpringBootAdminConsumerApplication.java" />
-        <option value="$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/spring-boot-admin-consumer-7010/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-admin-server-7001/pom.xml" />
-        <option value="$PROJECT_DIR$/spring-boot-admin-server-7001/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/spring-boot-admin-client-7002/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/spring-boot-admin-client-7003/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/java/com/flyxiaozhu/springbootadminconsumer/service/HelloService.java" />
         <option value="$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/java/com/flyxiaozhu/springbootadminconsumer/controller/HelloController.java" />
         <option value="$PROJECT_DIR$/spring-boot-admin-client-7002/src/main/java/com/flyxiaozhu/springbootadminclient/SpringBootAdminClientApplication.java" />
         <option value="$PROJECT_DIR$/spring-boot-admin-client-7003/src/main/java/com/flyxiaozhu/springbootadminclient7003/SpringBootAdminClient7003Application.java" />
-        <option value="$PROJECT_DIR$/spring-boot-admin-feign-7011/pom.xml" />
         <option value="$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/java/com/flyxiaozhu/springbootadminfeign/SpringBootAdminFeignApplication.java" />
+        <option value="$PROJECT_DIR$/spring-boot-admin-server-7001/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/java/com/flyxiaozhu/springbootadminfeign/service/HiServiceImpl.java" />
+        <option value="$PROJECT_DIR$/spring-boot-admin-feign-7011/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/java/com/flyxiaozhu/springbootadminfeign/service/HiService.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin-zuul-7012/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin-zuul-7012/src/main/java/com/flyxiaozhu/springbootadminzuul7012/SpringBootAdminZuul7012Application.java" />
+        <option value="$PROJECT_DIR$/spring-boot-admin-zuul-7012/src/main/java/com/flyxiaozhu/springbootadminzuul7012/filter/MyFilter.java" />
+        <option value="$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin-zuul-7012/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/java/com/flyxiaozhu/springbootadminfeign/controller/HiController.java" />
       </list>
     </option>
   </component>
@@ -96,10 +119,20 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="1129" />
-    <option name="width" value="799" />
-    <option name="height" value="1038" />
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="246" />
+    <option name="y" value="54" />
+    <option name="width" value="1607" />
+    <option name="height" value="982" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -124,41 +157,6 @@
               <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-boot-admin-feign-7011" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-boot-admin-feign-7011" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-boot-admin-feign-7011" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-boot-admin-feign-7011" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
-              <item name="spring-boot-admin-feign-7011" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springbootadminfeign" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -172,7 +170,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/git/Git/cmd/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../sell" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -183,6 +181,11 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.flyxiaozhu.springbootadminzuul7012.filter" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -196,7 +199,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SpringBootAdminClient02Application">
+  <component name="RunManager" selected="Spring Boot.SpringBootAdminFeignApplication">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -282,11 +285,34 @@
       <module name="spring-boot-admin-consumer-7010" />
       <envs />
     </configuration>
+    <configuration name="SpringBootAdminFeignApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.flyxiaozhu.springbootadminfeign.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.flyxiaozhu.springbootadminfeign.SpringBootAdminFeignApplication" />
+      <module name="spring-boot-admin-feign-7011" />
+      <envs />
+    </configuration>
     <configuration name="SpringBootAdminServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.flyxiaozhu.springbootadminserver.SpringBootAdminServerApplication" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <module name="spring-boot-admin-server-7001" />
+      <envs />
+    </configuration>
+    <configuration name="SpringBootAdminZuulApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.flyxiaozhu.springbootadminzuul7012.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.flyxiaozhu.springbootadminzuul7012.SpringBootAdminZuul7012Application" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <module name="spring-boot-admin-zuul-7012" />
       <envs />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -322,12 +348,14 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
-    <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Spring Boot.SpringBootAdminServerApplication" />
-      <item index="1" class="java.lang.String" itemvalue="Spring Boot.SpringBootAdminClient01Application" />
-      <item index="2" class="java.lang.String" itemvalue="Spring Boot.EurekaServerApplication" />
-      <item index="3" class="java.lang.String" itemvalue="Spring Boot.SpringBootAdminClient02Application" />
-      <item index="4" class="java.lang.String" itemvalue="Spring Boot.SpringBootAdminConsumerApplication" />
+    <list size="7">
+      <item index="0" class="java.lang.String" itemvalue="Spring Boot.SpringBootAdminConsumerApplication" />
+      <item index="1" class="java.lang.String" itemvalue="Spring Boot.SpringBootAdminFeignApplication" />
+      <item index="2" class="java.lang.String" itemvalue="Spring Boot.SpringBootAdminZuulApplication" />
+      <item index="3" class="java.lang.String" itemvalue="Spring Boot.SpringBootAdminServerApplication" />
+      <item index="4" class="java.lang.String" itemvalue="Spring Boot.SpringBootAdminClient01Application" />
+      <item index="5" class="java.lang.String" itemvalue="Spring Boot.EurekaServerApplication" />
+      <item index="6" class="java.lang.String" itemvalue="Spring Boot.SpringBootAdminClient02Application" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -349,38 +377,37 @@
       <workItem from="1540354007765" duration="42000" />
       <workItem from="1540354095395" duration="5257000" />
       <workItem from="1540378864343" duration="3275000" />
-      <workItem from="1540434518091" duration="20709000" />
+      <workItem from="1540434518091" duration="25980000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33540000" />
+    <option name="totallyTimeSpent" value="38811000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41257143" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45485714" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20493563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20493563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -571,14 +598,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eureka-server-7000/src/main/java/com/flyxiaozhu/eurekaserver/EurekaServerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -635,34 +654,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-actuator-autoconfigure/2.0.6.RELEASE/spring-boot-actuator-autoconfigure-2.0.6.RELEASE.jar!/org/springframework/boot/actuate/autoconfigure/endpoint/web/WebEndpointProperties.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="58" column="20" lean-forward="false" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot-admin-server-7001/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/java/com/flyxiaozhu/springbootadminconsumer/SpringBootAdminConsumerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding />
         </state>
       </provider>
@@ -675,43 +670,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot-admin-server-7001/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="21" column="67" lean-forward="false" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/spring-boot-admin-client-7002/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/java/com/flyxiaozhu/springbootadminconsumer/service/HelloService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="78" lean-forward="false" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="78" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#628#629#0" expanded="false" />
-            <element signature="e#685#686#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spring-boot-admin-client-7002/src/main/java/com/flyxiaozhu/springbootadminclient/SpringBootAdminClientApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
-          <folding>
-            <element signature="e#730#746#1" expanded="false" />
-            <element signature="e#869#870#0" expanded="false" />
-            <element signature="e#931#932#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -733,34 +696,157 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/java/com/flyxiaozhu/springbootadminconsumer/controller/HelloController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="44" lean-forward="false" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+        <state relative-caret-position="202">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/java/com/flyxiaozhu/springbootadminconsumer/service/HelloService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="13" column="18" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/java/com/flyxiaozhu/springbootadminconsumer/SpringBootAdminConsumerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-boot-admin-consumer-7010/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="17" column="11" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="17" selection-end-column="11" />
+        <state relative-caret-position="269">
+          <caret line="45" column="17" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="45" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-boot-admin-feign-7011/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="665">
-          <caret line="36" column="10" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+        <state relative-caret-position="312">
+          <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/java/com/flyxiaozhu/springbootadminfeign/service/HiServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="10" lean-forward="false" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="10" />
+          <folding>
+            <element signature="e#227#228#0" expanded="false" />
+            <element signature="e#265#266#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-client-7002/src/main/java/com/flyxiaozhu/springbootadminclient/SpringBootAdminClientApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="23" column="51" lean-forward="false" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/java/com/flyxiaozhu/springbootadminfeign/service/HiService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="4" lean-forward="false" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/java/com/flyxiaozhu/springbootadminfeign/SpringBootAdminFeignApplication.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="19" column="39" lean-forward="false" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-server-7001/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-zuul-7012/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-server-7001/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="75" lean-forward="false" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-consumer-7010/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="58" lean-forward="true" selection-start-line="14" selection-start-column="43" selection-end-line="14" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="13" column="55" lean-forward="false" selection-start-line="13" selection-start-column="55" selection-end-line="13" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-zuul-7012/src/main/java/com/flyxiaozhu/springbootadminzuul7012/SpringBootAdminZuul7012Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-zuul-7012/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="34" column="40" lean-forward="false" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-zuul-7012/src/main/java/com/flyxiaozhu/springbootadminzuul7012/filter/MyFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <caret line="49" column="27" lean-forward="false" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spring-boot-admin-feign-7011/src/main/java/com/flyxiaozhu/springbootadminfeign/controller/HiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="15" column="71" lean-forward="false" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
           <folding />
         </state>
       </provider>

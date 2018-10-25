@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/spring-boot-admin-consumer-7010/spring-boot-admin-consumer-7010.iml" filepath="$PROJECT_DIR$/spring-boot-admin-consumer-7010/spring-boot-admin-consumer-7010.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-admin-feign-7011/spring-boot-admin-feign-7011.iml" filepath="$PROJECT_DIR$/spring-boot-admin-feign-7011/spring-boot-admin-feign-7011.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-boot-admin-server-7001/spring-boot-admin-server-7001.iml" filepath="$PROJECT_DIR$/spring-boot-admin-server-7001/spring-boot-admin-server-7001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-admin-zuul-7012/spring-boot-admin-zuul-7012.iml" filepath="$PROJECT_DIR$/spring-boot-admin-zuul-7012/spring-boot-admin-zuul-7012.iml" />
     </modules>
   </component>
 </project>
