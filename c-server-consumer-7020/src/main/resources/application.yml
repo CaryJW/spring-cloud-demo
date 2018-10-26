@@ -1,0 +1,26 @@
+server:
+  port: 7020
+
+spring:
+  application:
+    name: spring-boot-admin-consumer
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+    registry-fetch-interval-seconds: 5
+  instance:
+    prefer-ip-address: true
+    instance-id: spring-boot-admin-consumer:${server.port}
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

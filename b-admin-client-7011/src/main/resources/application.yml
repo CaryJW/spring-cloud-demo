@@ -1,0 +1,32 @@
+server:
+  port: 7011
+
+spring:
+  application:
+    name: spring-boot-admin-client
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+#   ��ʾeureka client������ȥ��ȡ����ע����Ϣ��Ĭ��Ϊ30��
+    registry-fetch-interval-seconds: 5
+  instance:
+    prefer-ip-address: true
+    instance-id: spring-boot-admin-client:${server.port}
+#    ��ʾeureka client������ȥ��ȡ����ע����Ϣ��Ĭ��Ϊ30��
+    lease-expiration-duration-in-seconds: 30
+#    ��ʾeureka server����һ���յ�client������֮�󣬵ȴ���һ�������ĳ�ʱʱ�䣬�����ʱ������û�յ���һ�����������Ƴ���instance��Ĭ��Ϊ30��
+    lease-renewal-interval-in-seconds: 10
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+
+

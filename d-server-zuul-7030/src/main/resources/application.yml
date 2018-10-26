@@ -1,0 +1,36 @@
+server:
+  port: 7012
+
+spring:
+  application:
+    name: spring-boot-admin-zuul
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka
+    registry-fetch-interval-seconds: 5
+  instance:
+    prefer-ip-address: true
+    instance-id: spring-boot-admin-zuul:${server.port}
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 30
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: spring-boot-admin-consumer
+    api-b:
+      path: /api-b/**
+      serviceId: spring-boot-admin-feign
+
