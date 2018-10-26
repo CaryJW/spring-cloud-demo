@@ -1,5 +1,5 @@
 server:
-  port: 7003
+  port: 7011
 
 spring:
   application:
@@ -9,14 +9,14 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7000/eureka
-#   表示eureka client间隔多久去拉取服务注册信息，默认为30秒
+#   锟斤拷示eureka client锟斤拷锟斤拷锟斤拷去锟斤拷取锟斤拷锟斤拷注锟斤拷锟斤拷息锟斤拷默锟斤拷为30锟斤拷
     registry-fetch-interval-seconds: 5
   instance:
     prefer-ip-address: true
     instance-id: spring-boot-admin-client:${server.port}
-#    表示eureka client间隔多久去拉取服务注册信息，默认为30秒
+#    锟斤拷示eureka client锟斤拷锟斤拷锟斤拷去锟斤拷取锟斤拷锟斤拷注锟斤拷锟斤拷息锟斤拷默锟斤拷为30锟斤拷
     lease-expiration-duration-in-seconds: 30
-#    表示eureka server至上一次收到client的心跳之后，等待下一次心跳的超时时间，在这个时间内若没收到下一次心跳，则将移除该instance。默认为30秒
+#    锟斤拷示eureka server锟斤拷锟斤拷一锟斤拷锟秸碉拷client锟斤拷锟斤拷锟斤拷之锟襟，等达拷锟斤拷一锟斤拷锟斤拷锟斤拷锟侥筹拷时时锟戒，锟斤拷锟斤拷锟绞憋拷锟斤拷锟斤拷锟矫伙拷盏锟斤拷锟揭伙拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷瞥锟斤拷锟絠nstance锟斤拷默锟斤拷为30锟斤拷
     lease-renewal-interval-in-seconds: 10
 
 management:

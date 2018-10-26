@@ -12,12 +12,14 @@
 
   <!-- 被聚合的子模块索引 -->
   <modules>
-    <module>spring-boot-admin-server-7001</module>
-    <module>spring-boot-admin-client-7002</module>
-    <module>spring-boot-admin-client-7003</module>
-    <module>spring-boot-admin-consumer-7010</module>
-    <module>spring-boot-admin-feign-7011</module>
-    <module>spring-boot-admin-zuul-7012</module>
+    <module>a-admin-server-7001</module>
+    <module>a-eureka-server-7000</module>
+    <module>a-config-server-7002</module>
+    <!--<module>spring-boot-admin-client-7002</module>-->
+    <!--<module>spring-boot-admin-client-7003</module>-->
+    <!--<module>spring-boot-admin-consumer-7010</module>-->
+    <!--<module>spring-boot-admin-feign-7011</module>-->
+    <!--<module>spring-boot-admin-zuul-7012</module>-->
   </modules>
 
   <!-- 被继承 -->

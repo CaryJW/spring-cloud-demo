@@ -1,8 +1,9 @@
 server:
-  port: 7011
+  port: 7020
+
 spring:
   application:
-    name: spring-boot-admin-feign
+    name: spring-boot-admin-consumer
 
 eureka:
   client:
@@ -11,7 +12,7 @@ eureka:
     registry-fetch-interval-seconds: 5
   instance:
     prefer-ip-address: true
-    instance-id: spring-boot-admin-feign:${server.port}
+    instance-id: spring-boot-admin-consumer:${server.port}
     lease-renewal-interval-in-seconds: 10
     lease-expiration-duration-in-seconds: 30
 

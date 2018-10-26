@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="config-server-7002" />
         <module name="eureka-server-7000" />
         <module name="spring-boot-admin-client-7002" />
         <module name="spring-boot-admin-client-7003" />
@@ -16,6 +17,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="config-server-7002" target="1.8" />
       <module name="eureka-server-7000" target="1.8" />
       <module name="spring-boot-admin-client-7002" target="1.8" />
       <module name="spring-boot-admin-client-7003" target="1.8" />
