@@ -1,7 +1,6 @@
-package com.flyxiaozhu.springbootadminfeign.controller;
+package com.flyxiaozhu.serverfeign.controller;
 
-import com.flyxiaozhu.springbootadminfeign.service.HiService;
-import com.flyxiaozhu.springbootadminfeign.service.HiServiceImpl;
+import com.flyxiaozhu.serverfeign.service.HiService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

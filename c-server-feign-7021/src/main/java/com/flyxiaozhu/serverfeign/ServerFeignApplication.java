@@ -1,16 +1,16 @@
-package com.flyxiaozhu.springbootadminzuul7012;
+package com.flyxiaozhu.serverfeign;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableZuulProxy
-public class SpringBootAdminZuul7012Application {
+@EnableFeignClients
+public class ServerFeignApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootAdminZuul7012Application.class, args);
+		SpringApplication.run(ServerFeignApplication.class, args);
 	}
 }

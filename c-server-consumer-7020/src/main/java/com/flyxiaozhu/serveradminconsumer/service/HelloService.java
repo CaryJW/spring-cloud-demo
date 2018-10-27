@@ -1,4 +1,4 @@
-package com.flyxiaozhu.springbootadminconsumer.service;
+package com.flyxiaozhu.serveradminconsumer.service;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ public class HelloService {
 
     @HystrixCommand(fallbackMethod = "hiError") // 熔断器
     public String hiService(String name) {
-        return restTemplate.getForObject("http://spring-boot-admin-client/like?name=" + name, String.class);
+        return restTemplate.getForObject("http://admin-client/like?name=" + name, String.class);
     }
 
     public String hiError(String name) {

@@ -1,4 +1,4 @@
-package com.flyxiaozhu.springbootadminclient7003;
+package com.flyxiaozhu.adminclient;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class SpringBootAdminClient7003Application {
+public class AdminClientApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootAdminClient7003Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AdminClientApplication.class, args);
+    }
 
     @Value("${server.port}")
     private String port;

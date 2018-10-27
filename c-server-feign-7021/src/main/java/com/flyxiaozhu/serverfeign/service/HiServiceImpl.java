@@ -1,4 +1,4 @@
-package com.flyxiaozhu.springbootadminfeign.service;
+package com.flyxiaozhu.serverfeign.service;
 
 import org.springframework.stereotype.Component;
 

@@ -1,4 +1,4 @@
-package com.flyxiaozhu.springbootadminconsumer;
+package com.flyxiaozhu.serveradminconsumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,10 +11,10 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableHystrix // 开启短路器
-public class SpringBootAdminConsumerApplication {
+public class ServerConsumerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootAdminConsumerApplication.class, args);
+		SpringApplication.run(ServerConsumerApplication.class, args);
 	}
 
 	@Bean
