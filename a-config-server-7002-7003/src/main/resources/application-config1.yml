@@ -1,0 +1,33 @@
+server:
+  port: 7002
+spring:
+  profiles: config1
+#   git 仓库配置
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/fiyxiaozhu/SpringCloudConfig # 配置git仓库的地址
+          search-paths: respo  # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username:  # git仓库的用户和密码
+          password:
+      label: master # 分支
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
+    registry-fetch-interval-seconds: 5 #表示eureka client间隔多久去拉取服务注册信息，默认为30秒
+  instance:
+    lease-renewal-interval-in-seconds: 10 # 心跳时间，即服务续约间隔时间（缺省为30s）
+    lease-expiration-duration-in-seconds: 30 # 发呆时间，即服务续约到期时间（缺省为90s）
+    health-check-url-path: /actuator/health #健康监测相对路径
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true #是否显示IP地址
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露所有 endpoints
+  endpoint:
+    health:
+      show-details: always

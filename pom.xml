@@ -13,8 +13,8 @@
   <!-- 被聚合的子模块索引 -->
   <modules>
     <module>a-admin-server-7001</module>
-    <module>a-eureka-server-7000</module>
-    <module>a-config-server-7002</module>
+    <module>a-eureka-server-7000-7004</module>
+    <module>a-config-server-7002-7003</module>
     <module>b-admin-client-7010</module>
     <module>b-admin-client-7011</module>
     <module>c-server-consumer-7020</module>

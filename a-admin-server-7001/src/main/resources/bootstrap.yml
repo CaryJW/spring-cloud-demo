@@ -1,4 +1,3 @@
-
 # git仓库配置
 spring:
   cloud:
@@ -8,7 +7,9 @@ spring:
       discovery:
         enabled: true # 从配置中心读取文件
         service-id: config-server # 配置中心的serviceId，即服务名
+      fail-fast: true # 获取文件失败重试
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7000/eureka/ #注册地址
+      defaultZone: http://flyxiaozhu:1120zh.+@localhost:7000/eureka/ #注册地址 如果服务器端设置安全认证了 客户端在在配置defaultZone的时候需要带上用户名、密码
+

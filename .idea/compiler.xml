@@ -6,43 +6,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="a-admin-server-7001" />
-        <module name="a-config-server-7002" />
-        <module name="a-eureka-server-7000" />
-        <module name="b-admin-client-7010" />
-        <module name="b-admin-client-7011" />
-        <module name="c-server-consumer-7020" />
-        <module name="c-server-feign-7021" />
-        <module name="config-server-7002" />
-        <module name="d-server-zuul-7030" />
-        <module name="eureka-server-7000" />
-        <module name="spring-boot-admin-client-7002" />
+        <module name="config-server" />
+        <module name="eureka-server-demo" />
+        <module name="spring-boot-admin-client" />
         <module name="spring-boot-admin-client-7003" />
-        <module name="spring-boot-admin-consumer-7010" />
-        <module name="spring-boot-admin-feign-7011" />
-        <module name="spring-boot-admin-server-7001" />
+        <module name="spring-boot-admin-consumer" />
+        <module name="spring-boot-admin-feign" />
+        <module name="spring-boot-admin-server" />
         <module name="spring-boot-admin-zuul-7012" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="a-admin-server-7001" target="1.8" />
-      <module name="a-config-server-7002" target="1.8" />
-      <module name="a-eureka-server-7000" target="1.8" />
-      <module name="b-admin-client-7010" target="1.8" />
-      <module name="b-admin-client-7011" target="1.8" />
-      <module name="c-server-consumer-7020" target="1.8" />
-      <module name="c-server-feign-7021" target="1.8" />
-      <module name="config-server-7002" target="1.8" />
-      <module name="d-server-zuul-7030" target="1.8" />
-      <module name="eureka-server-7000" target="1.8" />
-      <module name="spring-boot-admin-client-7002" target="1.8" />
+      <module name="config-server" target="1.8" />
+      <module name="eureka-server-demo" target="1.8" />
+      <module name="spring-boot-admin-client" target="1.8" />
       <module name="spring-boot-admin-client-7003" target="1.8" />
-      <module name="spring-boot-admin-consumer-7010" target="1.8" />
-      <module name="spring-boot-admin-feign-7011" target="1.8" />
-      <module name="spring-boot-admin-server-7001" target="1.8" />
+      <module name="spring-boot-admin-consumer" target="1.8" />
+      <module name="spring-boot-admin-feign" target="1.8" />
+      <module name="spring-boot-admin-server" target="1.8" />
       <module name="spring-boot-admin-zuul-7012" target="1.8" />
-      <module name="SpringBootAdminDemo" target="1.8" />
-      <module name="SpringCloudAdminDemo" target="1.8" />
+      <module name="spring-cloud-admin-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
