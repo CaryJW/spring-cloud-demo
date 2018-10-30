@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.flyxiaozhu</groupId>
-	<artifactId>spring-boot-admin-client-7003</artifactId>
+	<artifactId>b-admin-client-7011</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-boot-admin-client-7003</name>
+	<name>admin-client-demo</name>
 	<description>Demo project for Spring Boot</description>
 
   <parent>
@@ -33,6 +33,11 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
+    <!--JMX-bean 管理所需依赖-->
+    <dependency>
+      <groupId>org.jolokia</groupId>
+      <artifactId>jolokia-core</artifactId>
     </dependency>
 	</dependencies>
 </project>
