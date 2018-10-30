@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.flyxiaozhu</groupId>
-	<artifactId>spring-boot-admin-server</artifactId>
+	<artifactId>a-admin-server-7001</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>spring-boot-admin-server</name>
+	<name>admin-server-demo</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -68,6 +68,24 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
+
+    <!--服务上下线邮件通知-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework.boot</groupId>-->
+      <!--<artifactId>spring-boot-starter-mail</artifactId>-->
+    <!--</dependency>-->
+
+    <!--JMX-bean 管理所需依赖-->
+    <dependency>
+      <groupId>org.jolokia</groupId>
+      <artifactId>jolokia-core</artifactId>
+    </dependency>
+
+    <!--hystrix的ui依赖-->
+    <dependency>
+      <groupId>de.codecentric</groupId>
+      <artifactId>spring-boot-admin-server-ui-hystrix</artifactId>
     </dependency>
   </dependencies>
 </project>

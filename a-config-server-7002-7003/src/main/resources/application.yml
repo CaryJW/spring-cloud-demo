@@ -3,3 +3,5 @@ spring:
     name: config-server
   profiles:
     active: config1
+info:
+  version: @project.version@

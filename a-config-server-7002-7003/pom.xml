@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.flyxiaozhu</groupId>
-	<artifactId>config-server</artifactId>
+	<artifactId>a-config-server-7002-7003</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>config-server</name>
+	<name>config-server-demo</name>
 	<description>Demo project for Spring Boot</description>
 
   <parent>
@@ -29,6 +29,11 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <!--JMX-bean 管理所需依赖-->
+    <dependency>
+      <groupId>org.jolokia</groupId>
+      <artifactId>jolokia-core</artifactId>
     </dependency>
 	</dependencies>
 </project>

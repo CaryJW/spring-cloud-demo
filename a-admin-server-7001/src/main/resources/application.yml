@@ -3,15 +3,36 @@ server:
 spring:
   application:
     name: admin-server
-  rabbitmq: # rabbitmq配置
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-  cloud:
-    bus:
-      enabled: true
-      trace:
-        enabled: true # 开启消息跟踪
+info:
+  version: @project.version@ # 显示版本信息
+#  mail:
+#    host: smtp.xxx.com
+#    username: 943569813@qq.com
+#    password: zhpwpvvrjwzebeia # POP3/SMTP服务 授权码
+#    default-encoding: UTF-8
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+#            required: true
+#    port: 25
+#  boot:
+#    admin:
+#      notify:
+#        mail:
+#          to: 1647622369@qq.com # 发送给谁
+#          from: 943569813@qq.com # 谁发出去的
+#  rabbitmq: # rabbitmq配置
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+#  cloud:
+#    bus:
+#      enabled: true
+#      trace:
+#        enabled: true # 开启消息跟踪
 
 
