@@ -3,21 +3,16 @@ server:
 spring:
   application:
     name: admin-server
-info:
-  version: @project.version@ # 显示版本信息
 #  mail:
-#    host: smtp.xxx.com
+#    host: smtp.qq.com
 #    username: 943569813@qq.com
-#    password: zhpwpvvrjwzebeia # POP3/SMTP服务 授权码
-#    default-encoding: UTF-8
+#    password: sdrqyfbpdibkbdia # POP3/SMTP服务 授权码
 #    properties:
 #      mail:
 #        smtp:
-#          auth: true
-#          starttls:
-#            enable: true
-#            required: true
-#    port: 25
+#          auth: true # 开启用户身份验证
+#    default-encoding: UTF-8
+#    port: 465
 #  boot:
 #    admin:
 #      notify:
@@ -34,5 +29,8 @@ info:
 #      enabled: true
 #      trace:
 #        enabled: true # 开启消息跟踪
+info:
+  version: @project.version@ # 显示版本信息
+
 
 

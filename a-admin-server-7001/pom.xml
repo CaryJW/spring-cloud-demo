@@ -82,10 +82,5 @@
       <artifactId>jolokia-core</artifactId>
     </dependency>
 
-    <!--hystrix的ui依赖-->
-    <dependency>
-      <groupId>de.codecentric</groupId>
-      <artifactId>spring-boot-admin-server-ui-hystrix</artifactId>
-    </dependency>
   </dependencies>
 </project>

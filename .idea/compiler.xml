@@ -24,6 +24,7 @@
       <module name="b-admin-client-7011" target="1.8" />
       <module name="c-server-consumer-7020" target="1.8" />
       <module name="c-server-feign-7021" target="1.8" />
+      <module name="c-server-feign-7022" target="1.8" />
       <module name="d-server-zuul-7030" target="1.8" />
       <module name="spring-cloud-admin-demo" target="1.8" />
     </bytecodeTargetLevel>
