@@ -25,7 +25,7 @@ public class AdminClientApplication {
     @Value("${test}")
     private String test;
 
-    @RequestMapping("/like")
+    @RequestMapping("/hello")
     public String like(@RequestParam(value = "name") String name) {
         return "Hello," + name + ".my port is:" + port;
     }

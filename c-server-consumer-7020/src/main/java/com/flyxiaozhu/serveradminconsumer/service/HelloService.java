@@ -12,7 +12,7 @@ public class HelloService {
 
     @HystrixCommand(fallbackMethod = "hiError") // 熔断器
     public String hiService(String name) {
-        return restTemplate.getForObject("http://admin-client/like?name=" + name, String.class);
+        return restTemplate.getForObject("http://admin-client/hello?name=" + name, String.class);
     }
 
     public String hiError(String name) {

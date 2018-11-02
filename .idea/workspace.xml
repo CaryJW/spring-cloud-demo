@@ -2,7 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c6661eb-e6ea-4c8c-be63-c7f2f60089f0" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/a-eureka-server-7000-7004/pom.xml" afterPath="$PROJECT_DIR$/a-eureka-server-7000-7004/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/resources/application-peer1.yml" afterPath="$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/resources/application-peer1.yml" />
+      <change beforePath="$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/resources/application-peer2.yml" afterPath="$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/resources/application-peer2.yml" />
+      <change beforePath="$PROJECT_DIR$/b-admin-client-7010/src/main/java/com/flyxiaozhu/adminclient/AdminClientApplication.java" afterPath="$PROJECT_DIR$/b-admin-client-7010/src/main/java/com/flyxiaozhu/adminclient/AdminClientApplication.java" />
+      <change beforePath="$PROJECT_DIR$/b-admin-client-7011/src/main/java/com/flyxiaozhu/adminclient2/AdminClient2Application.java" afterPath="$PROJECT_DIR$/b-admin-client-7011/src/main/java/com/flyxiaozhu/adminclient2/AdminClient2Application.java" />
+      <change beforePath="$PROJECT_DIR$/c-server-consumer-7020/src/main/java/com/flyxiaozhu/serveradminconsumer/controller/HelloController.java" afterPath="$PROJECT_DIR$/c-server-consumer-7020/src/main/java/com/flyxiaozhu/serveradminconsumer/controller/HelloController.java" />
+      <change beforePath="$PROJECT_DIR$/c-server-consumer-7020/src/main/java/com/flyxiaozhu/serveradminconsumer/service/HelloService.java" afterPath="$PROJECT_DIR$/c-server-consumer-7020/src/main/java/com/flyxiaozhu/serveradminconsumer/service/HelloService.java" />
+      <change beforePath="$PROJECT_DIR$/c-server-feign-7021/src/main/java/com/flyxiaozhu/serverfeign/controller/HiController.java" afterPath="$PROJECT_DIR$/c-server-feign-7021/src/main/java/com/flyxiaozhu/serverfeign/controller/HiController.java" />
+      <change beforePath="$PROJECT_DIR$/c-server-feign-7021/src/main/java/com/flyxiaozhu/serverfeign/service/HiService.java" afterPath="$PROJECT_DIR$/c-server-feign-7021/src/main/java/com/flyxiaozhu/serverfeign/service/HiService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/b-admin-client-7011/target/" />
     <ignored path="$PROJECT_DIR$/b-admin-client-7010/target/" />
@@ -21,19 +32,66 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/SpringBootAdminDemo$EurekaServerApplication.coverage" NAME="EurekaServerApplication Coverage Results" MODIFIED="1541070914170" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="88">
-                <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <first_editor relative-caret-position="483">
+                <caret line="368" column="0" lean-forward="true" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
                 <folding>
-                  <marker date="1541068992809" expanded="true" signature="0:3" ph="h2: #### 总架构图" />
+                  <marker date="1541132673398" expanded="true" signature="551:593" ph="@{...}" />
+                  <marker date="1541132673398" expanded="true" signature="673:678" ph=" { " />
+                  <marker date="1541132673398" expanded="true" signature="737:740" ph=" }" />
+                  <marker date="1541132673398" expanded="true" signature="2472:2514" ph="@{...}" />
+                  <marker date="1541132673398" expanded="true" signature="2472:2530" ph="@{...}" />
+                  <marker date="1541132673398" expanded="true" signature="2612:2623" ph=" { " />
+                  <marker date="1541132673398" expanded="true" signature="2681:2687" ph=" }" />
+                  <marker date="1541132673398" expanded="true" signature="2844:2907" ph="{...}" />
+                  <marker date="1541132673398" expanded="true" signature="2901:2907" ph=" }" />
+                  <marker date="1541132673398" expanded="true" signature="3828:3885" ph="@{...}" />
+                  <marker date="1541132673398" expanded="true" signature="3976:3981" ph=" { " />
+                  <marker date="1541132673398" expanded="true" signature="4042:4045" ph=" }" />
+                  <marker date="1541132673398" expanded="true" signature="4048:4071" ph="@{...}" />
+                  <marker date="1541132673398" expanded="true" signature="4118:4125" ph=" { " />
+                  <marker date="1541132673398" expanded="true" signature="4151:4157" ph=" }" />
+                  <marker date="1541132673398" expanded="true" signature="4403:4455" ph="{...}" />
+                  <marker date="1541132673398" expanded="true" signature="4671:4776" ph="{...}" />
+                  <marker date="1541132673398" expanded="true" signature="4816:4827" ph=" { " />
+                  <marker date="1541132673398" expanded="true" signature="4869:4875" ph=" }" />
+                  <marker date="1541132673398" expanded="true" signature="5240:5302" ph="@{...}" />
+                  <marker date="1541132673398" expanded="true" signature="5381:5386" ph=" { " />
+                  <marker date="1541132673398" expanded="true" signature="5444:5447" ph=" }" />
+                  <marker date="1541132673398" expanded="true" signature="5857:5868" ph=" { " />
+                  <marker date="1541132673398" expanded="true" signature="5891:5897" ph=" }" />
+                  <marker date="1541132673398" expanded="true" signature="6190:6246" ph="{...}" />
+                  <marker date="1541132673398" expanded="true" signature="6446:6505" ph="@{...}" />
+                  <marker date="1541132673398" expanded="true" signature="6583:6588" ph=" { " />
+                  <marker date="1541132673398" expanded="true" signature="6645:6648" ph=" }" />
+                  <marker date="1541132673398" expanded="true" signature="6956:6967" ph=" { " />
+                  <marker date="1541132673398" expanded="true" signature="6980:6986" ph=" }" />
+                  <marker date="1541132673398" expanded="true" signature="7043:7054" ph=" { " />
+                  <marker date="1541132673398" expanded="true" signature="7063:7069" ph=" }" />
+                  <marker date="1541132673398" expanded="true" signature="7154:7165" ph=" { " />
+                  <marker date="1541132673398" expanded="true" signature="7177:7183" ph=" }" />
+                  <marker date="1541132673398" expanded="true" signature="7295:8009" ph="{...}" />
                 </folding>
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/d-server-zuul-7030/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="572">
+              <caret line="35" column="17" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="35" selection-end-column="17" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -71,6 +129,17 @@
         <option value="$PROJECT_DIR$/a-admin-server-7001/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/a-admin-server-7001/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/a-eureka-server-7000-7004/pom.xml" />
+        <option value="$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/resources/application-peer2.yml" />
+        <option value="$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/resources/application-peer1.yml" />
+        <option value="$PROJECT_DIR$/b-admin-client-7010/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/b-admin-client-7010/src/main/java/com/flyxiaozhu/adminclient/AdminClientApplication.java" />
+        <option value="$PROJECT_DIR$/b-admin-client-7011/src/main/java/com/flyxiaozhu/adminclient2/AdminClient2Application.java" />
+        <option value="$PROJECT_DIR$/c-server-consumer-7020/src/main/java/com/flyxiaozhu/serveradminconsumer/service/HelloService.java" />
+        <option value="$PROJECT_DIR$/c-server-consumer-7020/src/main/java/com/flyxiaozhu/serveradminconsumer/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/c-server-feign-7021/src/main/java/com/flyxiaozhu/serverfeign/controller/HiController.java" />
+        <option value="$PROJECT_DIR$/c-server-feign-7021/src/main/java/com/flyxiaozhu/serverfeign/service/HiService.java" />
         <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
@@ -87,6 +156,22 @@
         <option name="importAutomatically" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="eureka-server-demo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="eureka-server-demo" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="139" />
@@ -112,7 +197,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,13 +207,64 @@
               <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="d-server-zuul-7030" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="d-server-zuul-7030" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="d-server-zuul-7030" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="d-server-zuul-7030" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="d-server-zuul-7030" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="serverzuul" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="d-server-zuul-7030" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="serverzuul" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringBootAdminDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringBootAdminDemo" type="462c0819:PsiDirectoryNode" />
+              <item name="d-server-zuul-7030" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -140,10 +278,16 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../erp2.0" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\SpringProjects\SpringBootAdminDemo\doc" />
+      <recent name="G:\SpringProjects\SpringBootAdminDemo\jar\peer\1" />
+      <recent name="G:\SpringProjects\SpringBootAdminDemo\jar\peer\2" />
       <recent name="G:\SpringProjects\SpringBootAdminDemo\c-server-feign-7022\src\main\resources" />
       <recent name="G:\SpringProjects\SpringBootAdminDemo\c-server-feign-7022\src\main\java\com\flyxiaozhu\serverfeign2" />
     </key>
@@ -324,46 +468,47 @@
       <workItem from="1540896123099" duration="611000" />
       <workItem from="1540953309409" duration="10002000" />
       <workItem from="1540978955138" duration="868000" />
-      <workItem from="1541067342145" duration="1539000" />
+      <workItem from="1541067342145" duration="4123000" />
+      <workItem from="1541126436124" duration="6227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13020000" />
+    <option name="totallyTimeSpent" value="21831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299356" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15128756" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7074286" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914287" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34057143" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21566524" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.472" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
@@ -379,6 +524,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/java/com/flyxiaozhu/eurekaserver/EurekaServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-eureka-server-7000-7004/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="33" column="17" lean-forward="false" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -397,37 +566,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/c-server-feign-7022/src/main/java/com/flyxiaozhu/serverfeign2/ServerFeign2Application.java" />
     <entry file="file://$PROJECT_DIR$/c-server-feign-7022/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/c-server-feign-7021/src/main/java/com/flyxiaozhu/serverfeign/ServerFeignApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-server-feign-7021/src/main/java/com/flyxiaozhu/serverfeign/service/HiService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-server-consumer-7020/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="40" column="17" lean-forward="true" selection-start-line="37" selection-start-column="4" selection-end-line="40" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c-server-feign-7021/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="39" column="17" lean-forward="false" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/c-server-feign-7022/src/main/resources/application.properties" />
     <entry file="file://$PROJECT_DIR$/c-server-feign-7022/src/main/resources/application.yml" />
     <entry file="file://$PROJECT_DIR$/c-server-feign-7022/src/main/resources/bootstrap.yml" />
@@ -458,21 +596,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/c-server-feign-7022/pom.xml" />
-    <entry file="file://$PROJECT_DIR$/a-admin-server-7001/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="83" column="4" lean-forward="false" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a-admin-server-7001/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-254">
-          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
@@ -481,13 +604,298 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/a-config-server-7002-7003/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="26" column="60" lean-forward="false" selection-start-line="26" selection-start-column="54" selection-end-line="26" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-admin-server-7001/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1704">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/java/com/flyxiaozhu/eurekaserver/EurekaServerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-eureka-server-7000-7004/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-config-server-7002-7003/src/main/resources/application-config2.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-config-server-7002-7003/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-config-server-7002-7003/src/main/resources/application-config1.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/resources/application-peer2.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-admin-server-7001/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-admin-server-7001/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a-eureka-server-7000-7004/src/main/resources/application-peer1.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/b-admin-client-7011/src/main/java/com/flyxiaozhu/adminclient2/AdminClient2Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding>
+            <element signature="e#831#832#0" expanded="false" />
+            <element signature="e#893#894#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/b-admin-client-7010/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="48" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/b-admin-client-7010/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="29" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/b-admin-client-7010/src/main/java/com/flyxiaozhu/adminclient/AdminClientApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/b-admin-client-7010/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-server-consumer-7020/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="40" column="17" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="40" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-server-consumer-7020/src/main/java/com/flyxiaozhu/serveradminconsumer/ServerConsumerApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-server-consumer-7020/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-server-consumer-7020/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-server-feign-7021/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="39" column="17" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="39" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-server-consumer-7020/src/main/java/com/flyxiaozhu/serveradminconsumer/service/HelloService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-server-consumer-7020/src/main/java/com/flyxiaozhu/serveradminconsumer/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-server-feign-7021/src/main/java/com/flyxiaozhu/serverfeign/ServerFeignApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-server-feign-7021/src/main/java/com/flyxiaozhu/serverfeign/service/HiService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-server-feign-7021/src/main/java/com/flyxiaozhu/serverfeign/service/HiServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c-server-feign-7021/src/main/java/com/flyxiaozhu/serverfeign/controller/HiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d-server-zuul-7030/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="35" column="17" lean-forward="true" selection-start-line="32" selection-start-column="4" selection-end-line="35" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d-server-zuul-7030/src/main/java/com/flyxiaozhu/serverzuul/ServerZuulApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/d-server-zuul-7030/src/main/java/com/flyxiaozhu/serverzuul/filter/MyFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="64" column="1" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="64" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="88">
-            <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <first_editor relative-caret-position="483">
+            <caret line="368" column="0" lean-forward="true" selection-start-line="368" selection-start-column="0" selection-end-line="368" selection-end-column="0" />
             <folding>
-              <marker date="1541068992809" expanded="true" signature="0:3" ph="h2: #### 总架构图" />
+              <marker date="1541132673398" expanded="true" signature="551:593" ph="@{...}" />
+              <marker date="1541132673398" expanded="true" signature="673:678" ph=" { " />
+              <marker date="1541132673398" expanded="true" signature="737:740" ph=" }" />
+              <marker date="1541132673398" expanded="true" signature="2472:2514" ph="@{...}" />
+              <marker date="1541132673398" expanded="true" signature="2472:2530" ph="@{...}" />
+              <marker date="1541132673398" expanded="true" signature="2612:2623" ph=" { " />
+              <marker date="1541132673398" expanded="true" signature="2681:2687" ph=" }" />
+              <marker date="1541132673398" expanded="true" signature="2844:2907" ph="{...}" />
+              <marker date="1541132673398" expanded="true" signature="2901:2907" ph=" }" />
+              <marker date="1541132673398" expanded="true" signature="3828:3885" ph="@{...}" />
+              <marker date="1541132673398" expanded="true" signature="3976:3981" ph=" { " />
+              <marker date="1541132673398" expanded="true" signature="4042:4045" ph=" }" />
+              <marker date="1541132673398" expanded="true" signature="4048:4071" ph="@{...}" />
+              <marker date="1541132673398" expanded="true" signature="4118:4125" ph=" { " />
+              <marker date="1541132673398" expanded="true" signature="4151:4157" ph=" }" />
+              <marker date="1541132673398" expanded="true" signature="4403:4455" ph="{...}" />
+              <marker date="1541132673398" expanded="true" signature="4671:4776" ph="{...}" />
+              <marker date="1541132673398" expanded="true" signature="4816:4827" ph=" { " />
+              <marker date="1541132673398" expanded="true" signature="4869:4875" ph=" }" />
+              <marker date="1541132673398" expanded="true" signature="5240:5302" ph="@{...}" />
+              <marker date="1541132673398" expanded="true" signature="5381:5386" ph=" { " />
+              <marker date="1541132673398" expanded="true" signature="5444:5447" ph=" }" />
+              <marker date="1541132673398" expanded="true" signature="5857:5868" ph=" { " />
+              <marker date="1541132673398" expanded="true" signature="5891:5897" ph=" }" />
+              <marker date="1541132673398" expanded="true" signature="6190:6246" ph="{...}" />
+              <marker date="1541132673398" expanded="true" signature="6446:6505" ph="@{...}" />
+              <marker date="1541132673398" expanded="true" signature="6583:6588" ph=" { " />
+              <marker date="1541132673398" expanded="true" signature="6645:6648" ph=" }" />
+              <marker date="1541132673398" expanded="true" signature="6956:6967" ph=" { " />
+              <marker date="1541132673398" expanded="true" signature="6980:6986" ph=" }" />
+              <marker date="1541132673398" expanded="true" signature="7043:7054" ph=" { " />
+              <marker date="1541132673398" expanded="true" signature="7063:7069" ph=" }" />
+              <marker date="1541132673398" expanded="true" signature="7154:7165" ph=" { " />
+              <marker date="1541132673398" expanded="true" signature="7177:7183" ph=" }" />
+              <marker date="1541132673398" expanded="true" signature="7295:8009" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
@@ -497,9 +905,82 @@
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>struts2-lib-jar</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>c-server-feign-7021</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

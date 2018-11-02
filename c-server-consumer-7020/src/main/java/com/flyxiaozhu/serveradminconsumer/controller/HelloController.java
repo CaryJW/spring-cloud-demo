@@ -11,8 +11,8 @@ public class HelloController {
     @Autowired
     HelloService helloService;
 
-    @RequestMapping("/like")
-    public String hi(@RequestParam(value = "name",defaultValue = "慧慧") String name){
+    @RequestMapping("/hello")
+    public String hi(@RequestParam(value = "name",defaultValue = "flyxiaozhu") String name){
         return helloService.hiService(name);
     }
 }

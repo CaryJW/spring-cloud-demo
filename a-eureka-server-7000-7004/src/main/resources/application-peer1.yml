@@ -6,7 +6,7 @@ eureka:
   instance:
     hostname: peer1
   client:
-    register-with-eureka: false # 不向注册中心注册自己
-    fetch-registry: false # 表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+#    register-with-eureka: false # 不向注册中心注册自己
+#    fetch-registry: false # 表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
     service-url:
-      defaultZone: http://peer2:7003/eureka/ # 地址
+      defaultZone: http://peer2:7004/eureka/ # 地址

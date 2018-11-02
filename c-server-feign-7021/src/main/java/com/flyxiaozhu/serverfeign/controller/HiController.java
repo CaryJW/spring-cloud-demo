@@ -11,8 +11,8 @@ public class HiController {
     @Autowired
     HiService hiService; // 编译器报错，无视。 因为这个Bean是在程序启动的时候注入的，编译器感知不到，所以报错
 
-    @RequestMapping("/like")
-    public String like(@RequestParam(value = "name", defaultValue = "慧慧") String name) {
+    @RequestMapping("/hello")
+    public String like(@RequestParam(value = "name", defaultValue = "flyxiaozhu") String name) {
         return hiService.sayLikeClientOne(name);
     }
 }
