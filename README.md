@@ -3,10 +3,10 @@
 
 ---
 
-> 学习博客：http://www.mooooc.com/spring-cloud.html
-           https://blog.csdn.net/forezp/article/details/70148833
-> spring boot 版本2.0以上
-> 服务启动顺序，eureka-server 》config-server 》admin-server 》admin-client 。。。。
+> 学习博客：http://www.mooooc.com/spring-cloud.html  
+https://blog.csdn.net/forezp/article/details/70148833  
+spring boot 版本2.0以上  
+服务启动顺序，eureka-server 》config-server 》admin-server 》admin-client 。。。。
 
 ### 一、eureka 服务的注册与发现
 #### ①依赖
@@ -18,7 +18,8 @@
 ```
 
 #### ②开启服务注册  
-    通过 *@EnableEurekaServer* 注解启动一个服务注册中心提供给其他应用进行对话,这个注解需要在springboot工程的启动application类上加
+    通过 *@EnableEurekaServer* 注解启动一个服务注册中心提供给其他应用进行对话,  
+    这个注解需要在springboot工程的启动application类上加
 ````java
 @SpringBootApplication
 @EnableEurekaServer
@@ -366,9 +367,443 @@ public class MyFilter extends ZuulFilter{
 ````
 
 ### 五、分布式配置中心
+> config-server
+#### ①依赖
+````java
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-config-server</artifactId>
+</dependency>
+````
+#### ②启动类
+springboot工程的启动application类上加@EnableConfigServer注解
+````java
+@SpringBootApplication
+@EnableEurekaClient
+@EnableConfigServer
+public class ConfigServerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ConfigServerApplication.class, args);
+	}
+}
+````
+#### ③集群配置
+- application.yml
+````java
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: config1
+info:
+  version: @project.version@
+````
+- application-config1.yml
+````java
+server:
+  port: 7002
+spring:
+  profiles: config1
+#   git 仓库配置
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/fiyxiaozhu/SpringCloudConfig # 配置git仓库的地址
+          search-paths: respo  # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username:  # git仓库的用户和密码
+          password:
+      label: master # 分支
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
+    registry-fetch-interval-seconds: 5 #表示eureka client间隔多久去拉取服务注册信息，默认为30秒
+  instance:
+    lease-renewal-interval-in-seconds: 10 # 心跳时间，即服务续约间隔时间（缺省为30s）
+    lease-expiration-duration-in-seconds: 30 # 发呆时间，即服务续约到期时间（缺省为90s）
+    health-check-url-path: /actuator/health #健康监测相对路径
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true #是否显示IP地址
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露所有 endpoints
+  endpoint:
+    health:
+      show-details: always
+````
+- application-config2.yml
+````java
+server:
+  port: 7003
+spring:
+  profiles: config2
+#   git 仓库配置
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/fiyxiaozhu/SpringCloudConfig # 配置git仓库的地址
+          search-paths: respo  # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username:  # git仓库的用户和密码
+          password:
+      label: master # 分支
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
+    registry-fetch-interval-seconds: 5 #表示eureka client间隔多久去拉取服务注册信息，默认为30秒
+  instance:
+    lease-renewal-interval-in-seconds: 10 # 心跳时间，即服务续约间隔时间（缺省为30s）
+    lease-expiration-duration-in-seconds: 30 # 发呆时间，即服务续约到期时间（缺省为90s）
+    health-check-url-path: /actuator/health #健康监测相对路径
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true #是否显示IP地址
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露所有 endpoints
+  endpoint:
+    health:
+      show-details: always
+````
+> config-client
+
+#### ①依赖
+````java
+<dependency>
+  <groupId>org.springframework.cloud</groupId>
+  <artifactId>spring-cloud-starter-config</artifactId>
+</dependency>
+````
+#### ②启动类
+springboot工程的启动application类上加@EnableConfigServer注解
+````java
+
+````
+#### ③集群配置
+- application.yml
+````java
+server:
+  port: 7010
+spring:
+  application:
+    name: admin-client
+info:
+  version: @project.version@ # 显示版本信息
+````
+- bootstrap.yml
+````java
+# git仓库配置
+spring:
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        service-id: config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7000/eureka/
+````
+
+---
+> 配置仓库
+![img](doc/config.png)
+
+### 五、spring-boot-admin
+#### ①依赖
+````java
+<dependency>
+    <groupId>de.codecentric</groupId>
+    <artifactId>spring-boot-admin-starter-server</artifactId>
+</dependency>
+
+<!--有spring-boot-admin-starter-server依赖，所以不需要该依赖-->
+<!--<dependency>-->
+  <!--<groupId>org.springframework.boot</groupId>-->
+  <!--<artifactId>spring-boot-starter-actuator</artifactId>-->
+<!--</dependency>-->
+
+<dependency>
+  <groupId>de.codecentric</groupId>
+  <artifactId>spring-boot-admin-server-ui</artifactId>
+</dependency>
+
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+<!--增加安全控制的依赖-->
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-security</artifactId>
+</dependency>
+
+<!--JMX-bean 管理所需依赖-->
+<dependency>
+  <groupId>org.jolokia</groupId>
+  <artifactId>jolokia-core</artifactId>
+</dependency>
+````
+#### ②启动类
+````java
+@SpringBootApplication
+@EnableAdminServer // 开启监控功能
+@EnableEurekaClient //注册到 Eureka
+@RefreshScope // 开启配置自动刷新功能
+public class AdminServerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AdminServerApplication.class, args);
+	}
+
+    @Profile("insecure") // 测试时搭配@ActiveProfiles("insecure")使用 也可以在配置文件中 spring.profiles.active 配置
+    @Configuration // 表明是个配置类
+//    @EnableWebSecurity
+	public static class SecurityPermitAllConfig extends WebSecurityConfigurerAdapter{
+        @Override
+        protected void configure(HttpSecurity http) throws Exception {
+            http.authorizeRequests().anyRequest().permitAll().and().csrf().disable();
+        }
+    }
+//
+    @Profile("secure")
+    @Configuration
+//    @EnableWebSecurity // 注解开启Spring Security的功能
+    public static class SecuritySecureConfig extends WebSecurityConfigurerAdapter {
+        private final String adminContextPath;
+
+        public SecuritySecureConfig(AdminServerProperties adminServerProperties) {
+            this.adminContextPath = adminServerProperties.getContextPath();
+        }
+
+        @Override
+        protected void configure(HttpSecurity http) throws Exception {
+            SavedRequestAwareAuthenticationSuccessHandler successHandler = new SavedRequestAwareAuthenticationSuccessHandler();
+            successHandler.setTargetUrlParameter("redirectTo");
+
+            http.authorizeRequests() //定义哪些URL需要被保护、哪些不需要被保护
+                    .antMatchers(adminContextPath + "/assets/**").permitAll()
+                    .antMatchers(adminContextPath + "/login").permitAll()
+                    .anyRequest().authenticated() // 表示其他的请求都必须要有权限认证
+                    .and()
+                    .formLogin().loginPage(adminContextPath + "/login").successHandler(successHandler)
+                    .and()
+                    .logout().logoutUrl(adminContextPath + "/logout")
+                    .and()
+                    .httpBasic()
+                    .and()
+                    .csrf().disable();
+        }
+    }
+}
+````
+
+#### ④配置
+- application.yml
+````java
+server:
+  port: 7001
+spring:
+  application:
+    name: admin-server
+#  mail:
+#    host: smtp.qq.com
+#    username: 943569813@qq.com
+#    password: sdrqyfbpdibkbdia # POP3/SMTP服务 授权码
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true # 开启用户身份验证
+#    default-encoding: UTF-8
+#    port: 465
+#  boot:
+#    admin:
+#      notify:
+#        mail:
+#          to: 1647622369@qq.com # 发送给谁
+#          from: 943569813@qq.com # 谁发出去的
+#  rabbitmq: # rabbitmq配置
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
+#  cloud:
+#    bus:
+#      enabled: true
+#      trace:
+#        enabled: true # 开启消息跟踪
+info:
+  version: @project.version@ # 显示版本信息
+````
+- bootstrap.yml
+````java
+# git仓库配置
+spring:
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled: true # 从配置中心读取文件
+        service-id: config-server # 配置中心的serviceId，即服务名
+      fail-fast: true # 获取文件失败重试
+      retry:
+        initial-interval: 1000 # 最初重试间隔为 1000 毫秒
+        max-attempts: 6 # 最多重试 6 次
+        max-interval: 2000 # 最长重试间隔为 2000 毫秒
+        multiplier: 1.1 # 每次重试失败后，重试间隔所增加的倍数
+eureka:
+  client:
+    service-url:
+      defaultZone: http://flyxiaozhu:1120zh.+@localhost:7000/eureka/ #注册地址 如果服务器端设置安全认证了 客户端在在配置defaultZone的时候需要带上用户名、密码
+````
+- admin-server-dev.yml
+````java
+spring:
+  profiles:
+    active: secure # 配置选择 搭配 @Profile("insecure") 使用
+  security:
+    user:
+      name: flyxiaozhu # 设置登陆的用户名和密码 client为单纯的spring-boot程序
+      password: 1120zh.+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10 # 心跳时间，即服务续约间隔时间（缺省为30s）
+    lease-expiration-duration-in-seconds: 30 # 发呆时间，即服务续约到期时间（缺省为90s）
+    health-check-url-path: /actuator/health #健康监测相对路径
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true #是否显示IP地址
+    metadata-map: # 注册给eureka的时候告诉eureka自己的密码
+      user:
+        name: flyxiaozhu # client为spring-cloud程序
+        password: 1120zh.+
+  client:
+    registry-fetch-interval-seconds: 5 #表示eureka client间隔多久去拉取服务注册信息，默认为30秒
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #暴露所有 endpoints
+  endpoint:
+    health:
+      show-details: always
+````
+#### ⑤运行结果
+- login
+![img](doc/login.png)
+- application
+![img](doc/admin-server.png)
+- 服务上下线日志
+![img](doc/journal.png)
+- 服务信息
+![img](doc/info.png)
+
+#### ⑥注意
+- 使用 jvm 需要该依赖
+````java
+<!--JMX-bean 管理所需依赖-->
+<dependency>
+  <groupId>org.jolokia</groupId>
+  <artifactId>jolokia-core</artifactId>
+</dependency>
+````
+- 查看服务详细信息 
+````java
+<!--暴露自身信息端点依赖-->
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+````
+
+- 配置
+````java
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #暴露所有 endpoints
+  endpoint:
+    health:
+      show-details: always
+````
+
+- 控制服务日志级别，需要配置logback
+resources目录下添加logback.xml
+````java
+<configuration>
+  <include resource="org/springframework/boot/logging/logback/base.xml"/>
+  <jmxConfigurator/>
+</configuration>
+````
 
 
-### 六、spring-boot-admin
+### 六、读取git配置超时和重试
+#### ①依赖
+````java
+<!--获取git文件失败重启的依赖-->
+<dependency>
+  <groupId>org.springframework.retry</groupId>
+  <artifactId>spring-retry</artifactId>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-aop</artifactId>
+</dependency>
+````
+#### ②配置
+````java
+# git仓库配置
+spring:
+  cloud:
+    config:
+      retry:
+        initial-interval: 1000 # 最初重试间隔为 1000 毫秒
+        max-attempts: 6 # 最多重试 6 次
+        max-interval: 2000 # 最长重试间隔为 2000 毫秒
+        multiplier: 1.1 # 每次重试失败后，重试间隔所增加的倍数
+````
+
+### 七、config自动刷新
+#### ①依赖
+>需要安装rabbitmq
+````java
+<!--自动刷新配置-->
+<dependency>
+  <groupId>org.springframework.cloud</groupId>
+  <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+</dependency>
+````
+#### ②启动类
+启动类中加入@RefreshScope注解
+#### ③配置
+````java
+spring:
+  rabbitmq: # rabbitmq配置
+    host: localhost
+    port: 5672
+    username: guest
+   password: guest
+  cloud:
+    bus:
+      enabled: true
+      trace:
+        enabled: true # 开启消息跟踪
+````
+#### ④使用
+> 当git仓库里面的配置发生改变，post 访问 http://localhost:7001/actuator/bus-refresh  
+则该服务器会重新去git仓库获取配置
+
+### 八、服务挂掉重启
 
 
 

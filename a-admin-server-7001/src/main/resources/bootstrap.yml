@@ -8,6 +8,11 @@ spring:
         enabled: true # 从配置中心读取文件
         service-id: config-server # 配置中心的serviceId，即服务名
       fail-fast: true # 获取文件失败重试
+      retry:
+        initial-interval: 1000 # 最初重试间隔为 1000 毫秒
+        max-attempts: 6 # 最多重试 6 次
+        max-interval: 2000 # 最长重试间隔为 2000 毫秒
+        multiplier: 1.1 # 每次重试失败后，重试间隔所增加的倍数
 eureka:
   client:
     service-url:
