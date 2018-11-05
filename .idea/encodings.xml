@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+  <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/a-admin-server-7001" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/a-config-server-7002-7003" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/a-eureka-server-7000-7004" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/b-admin-client-7010" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/b-admin-client-7011" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/c-server-consumer-7020" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/c-server-feign-7021" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/d-server-zuul-7030" charset="UTF-8" />
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin-server-7001" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/config-server-7002-7003" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka-server-7000-7004" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-consumer-7020" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-feign-7021" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-hello-7010" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-hello-7011" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/server-zuul-7030" charset="UTF-8" />
   </component>
 </project>

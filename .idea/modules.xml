@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/a-admin-server-7001/a-admin-server-7001.iml" filepath="$PROJECT_DIR$/a-admin-server-7001/a-admin-server-7001.iml" />
-      <module fileurl="file://$PROJECT_DIR$/a-config-server-7002-7003/a-config-server-7002-7003.iml" filepath="$PROJECT_DIR$/a-config-server-7002-7003/a-config-server-7002-7003.iml" />
-      <module fileurl="file://$PROJECT_DIR$/a-eureka-server-7000-7004/a-eureka-server-7000-7004.iml" filepath="$PROJECT_DIR$/a-eureka-server-7000-7004/a-eureka-server-7000-7004.iml" />
-      <module fileurl="file://$PROJECT_DIR$/b-admin-client-7010/b-admin-client-7010.iml" filepath="$PROJECT_DIR$/b-admin-client-7010/b-admin-client-7010.iml" />
-      <module fileurl="file://$PROJECT_DIR$/b-admin-client-7011/b-admin-client-7011.iml" filepath="$PROJECT_DIR$/b-admin-client-7011/b-admin-client-7011.iml" />
-      <module fileurl="file://$PROJECT_DIR$/c-server-consumer-7020/c-server-consumer-7020.iml" filepath="$PROJECT_DIR$/c-server-consumer-7020/c-server-consumer-7020.iml" />
-      <module fileurl="file://$PROJECT_DIR$/c-server-feign-7021/c-server-feign-7021.iml" filepath="$PROJECT_DIR$/c-server-feign-7021/c-server-feign-7021.iml" />
-      <module fileurl="file://$PROJECT_DIR$/d-server-zuul-7030/d-server-zuul-7030.iml" filepath="$PROJECT_DIR$/d-server-zuul-7030/d-server-zuul-7030.iml" />
+      <module fileurl="file://$PROJECT_DIR$/admin-server-7001/admin-server-7001.iml" filepath="$PROJECT_DIR$/admin-server-7001/admin-server-7001.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server-7002-7003/config-server-7002-7003.iml" filepath="$PROJECT_DIR$/config-server-7002-7003/config-server-7002-7003.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server-7000-7004/eureka-server-7000-7004.iml" filepath="$PROJECT_DIR$/eureka-server-7000-7004/eureka-server-7000-7004.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-consumer-7020/server-consumer-7020.iml" filepath="$PROJECT_DIR$/server-consumer-7020/server-consumer-7020.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-feign-7021/server-feign-7021.iml" filepath="$PROJECT_DIR$/server-feign-7021/server-feign-7021.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-hello-7010/server-hello-7010.iml" filepath="$PROJECT_DIR$/server-hello-7010/server-hello-7010.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-hello-7011/server-hello-7011.iml" filepath="$PROJECT_DIR$/server-hello-7011/server-hello-7011.iml" />
+      <module fileurl="file://$PROJECT_DIR$/server-zuul-7030/server-zuul-7030.iml" filepath="$PROJECT_DIR$/server-zuul-7030/server-zuul-7030.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-admin-demo.iml" filepath="$PROJECT_DIR$/spring-cloud-admin-demo.iml" />
     </modules>
   </component>
