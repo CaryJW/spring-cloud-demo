@@ -19,7 +19,7 @@
 
   <properties>
     <docker.image.prefix>flyxiaozhu</docker.image.prefix>
-    <project.build.finalName>eureka-server-7000-7004-0.0.1-SNAPSHOT</project.build.finalName>
+    <project.build.finalName>eureka-server-0.0.1-SNAPSHOT</project.build.finalName>
     <!--<project.dockerFileDir>src/main/docker</project.dockerFileDir>-->
   </properties>
 

@@ -23,186 +23,186 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: peer2
 
-
-###########################           分布式配置中心         ####################################
-
-  config-server-1:
-    build: ./config-server/
-    restart: always
-    expose:
-      - "7010"
-    environment:
-      # git 仓库配置
-      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig   # 配置git仓库的地址
-      SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo                                   # git仓库地址下的相对地址，可以配置多个，用,分割。
-#      SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME:                                             # git仓库的用户和密码
-#      SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD:
-      SPRING_CLOUD_CONFIG_LABEL:  master                                                    # 分支
-
-  config-server-2:
-      build: ./config-server/
-      restart: always
-      expose:
-        - "7011"
-      environment:
-        SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig
-        SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo
-        SPRING_CLOUD_CONFIG_LABEL:  master # 分支
-
-
-###########################           spring-boot-admin        ####################################
-
-  admin-server:
-    build: ./admin-server/
-    restart: always
-    ports:
-      - "7020:7020"
-    expose:
-      - "7020"
-    environment:
-      # 配置中心客户端配置
-      SPRING_CLOUD_CONFIG_LABEL: master
-      SPRING_CLOUD_CONFIG_PROFILE: dev
-      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"             # 从配置中心读取文件
-      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server   # 配置中心的serviceId
-      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"                     # 获取文件失败重试
-      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000          # 最初重试间隔为 1000 毫秒
-      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6                 # 最多重试 6 次
-      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000              # 最长重试间隔为 2000 毫秒
-      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1                 # 每次重试失败后，重试间隔所增加的倍数
-
-
-################################           服务提供者        ########################################
-
-  server-hello-1:
-    build: ./server-hello
-    restart: always
-    expose:
-      - "7030"
-    environment:
-      # 配置中心客户端配置
-      SPRING_CLOUD_CONFIG_LABEL: master
-      SPRING_CLOUD_CONFIG_PROFILE: dev
-      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
-      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
-      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
-      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
-      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
-      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
-      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
-
-      # 信息总线配置 rabbitmq配置
-      SPRING_RABBITMQ_HOST: localhost
-      SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
-      SPRING_CLOUD_BUS_ENABLED: "true"
-      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
-
-  server-hello-2:
-    build: ./server-hello-2
-    restart: always
-    expose:
-      - "7031"
-    environment:
-      # 配置中心客户端配置
-      SPRING_CLOUD_CONFIG_LABEL: master
-      SPRING_CLOUD_CONFIG_PROFILE: dev
-      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
-      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
-      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
-      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
-      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
-      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
-      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
-
-      # 信息总线配置 rabbitmq配置
-      SPRING_RABBITMQ_HOST: localhost
-      SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
-      SPRING_CLOUD_BUS_ENABLED: "true"
-      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
-
-
-################################           服务消费者        ########################################
-
-  server-hello-2:
-    build: ./server-consumer
-    restart: always
-    expose:
-      - "7040"
-    environment:
-      # 配置中心客户端配置
-      SPRING_CLOUD_CONFIG_LABEL: master
-      SPRING_CLOUD_CONFIG_PROFILE: dev
-      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
-      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
-      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
-      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
-      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
-      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
-      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
-
-      # 信息总线配置 rabbitmq配置
-      SPRING_RABBITMQ_HOST: localhost
-      SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
-      SPRING_CLOUD_BUS_ENABLED: "true"
-      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
-
-  server-hello-2:
-    build: ./server-feign
-    restart: always
-    expose:
-      - "7041"
-    environment:
-      # 配置中心客户端配置
-      SPRING_CLOUD_CONFIG_LABEL: master
-      SPRING_CLOUD_CONFIG_PROFILE: dev
-      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
-      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
-      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
-      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
-      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
-      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
-      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
-
-      # 信息总线配置 rabbitmq配置
-      SPRING_RABBITMQ_HOST: localhost
-      SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
-      SPRING_CLOUD_BUS_ENABLED: "true"
-      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
-
-
-################################           zuul网关        ########################################
-
-  server-hello-2:
-    build: ./server-zuul
-    restart: always
-    ports:
-      - "7070:7070"
-    expose:
-      - "7070"
-    environment:
-      # 配置中心客户端配置
-      SPRING_CLOUD_CONFIG_LABEL: master
-      SPRING_CLOUD_CONFIG_PROFILE: dev
-      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
-      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
-      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
-      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
-      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
-      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
-      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
-
-      # 信息总线配置 rabbitmq配置
-      SPRING_RABBITMQ_HOST: localhost
-      SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
-      SPRING_CLOUD_BUS_ENABLED: "true"
-      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
+#
+############################           分布式配置中心         ####################################
+#
+#  config-server-1:
+#    build: ./config-server/
+#    restart: always
+#    expose:
+#      - "7010"
+#    environment:
+#      # git 仓库配置
+#      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig   # 配置git仓库的地址
+#      SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo                                   # git仓库地址下的相对地址，可以配置多个，用,分割。
+##      SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME:                                             # git仓库的用户和密码
+##      SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD:
+#      SPRING_CLOUD_CONFIG_LABEL:  master                                                    # 分支
+#
+#  config-server-2:
+#      build: ./config-server/
+#      restart: always
+#      expose:
+#        - "7011"
+#      environment:
+#        SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig
+#        SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo
+#        SPRING_CLOUD_CONFIG_LABEL:  master # 分支
+#
+#
+############################           spring-boot-admin        ####################################
+#
+#  admin-server:
+#    build: ./admin-server/
+#    restart: always
+#    ports:
+#      - "7020:7020"
+#    expose:
+#      - "7020"
+#    environment:
+#      # 配置中心客户端配置
+#      SPRING_CLOUD_CONFIG_LABEL: master
+#      SPRING_CLOUD_CONFIG_PROFILE: dev
+#      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"             # 从配置中心读取文件
+#      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server   # 配置中心的serviceId
+#      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"                     # 获取文件失败重试
+#      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000          # 最初重试间隔为 1000 毫秒
+#      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6                 # 最多重试 6 次
+#      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000              # 最长重试间隔为 2000 毫秒
+#      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1                 # 每次重试失败后，重试间隔所增加的倍数
+#
+#
+#################################           服务提供者        ########################################
+#
+#  server-hello-1:
+#    build: ./server-hello
+#    restart: always
+#    expose:
+#      - "7030"
+#    environment:
+#      # 配置中心客户端配置
+#      SPRING_CLOUD_CONFIG_LABEL: master
+#      SPRING_CLOUD_CONFIG_PROFILE: dev
+#      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
+#      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
+#      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
+#      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
+#      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
+#      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
+#      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
+#
+#      # 信息总线配置 rabbitmq配置
+#      SPRING_RABBITMQ_HOST: localhost
+#      SPRING_RABBITMQ_PORT: 5672
+#      SPRING_RABBITMQ_USERNAME: guest
+#      SPRING_RABBITMQ_PASSWORD: guest
+#      SPRING_CLOUD_BUS_ENABLED: "true"
+#      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
+#
+#  server-hello-2:
+#    build: ./server-hello-2
+#    restart: always
+#    expose:
+#      - "7031"
+#    environment:
+#      # 配置中心客户端配置
+#      SPRING_CLOUD_CONFIG_LABEL: master
+#      SPRING_CLOUD_CONFIG_PROFILE: dev
+#      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
+#      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
+#      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
+#      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
+#      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
+#      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
+#      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
+#
+#      # 信息总线配置 rabbitmq配置
+#      SPRING_RABBITMQ_HOST: localhost
+#      SPRING_RABBITMQ_PORT: 5672
+#      SPRING_RABBITMQ_USERNAME: guest
+#      SPRING_RABBITMQ_PASSWORD: guest
+#      SPRING_CLOUD_BUS_ENABLED: "true"
+#      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
+#
+#
+#################################           服务消费者        ########################################
+#
+#  server-hello-2:
+#    build: ./server-consumer
+#    restart: always
+#    expose:
+#      - "7040"
+#    environment:
+#      # 配置中心客户端配置
+#      SPRING_CLOUD_CONFIG_LABEL: master
+#      SPRING_CLOUD_CONFIG_PROFILE: dev
+#      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
+#      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
+#      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
+#      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
+#      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
+#      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
+#      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
+#
+#      # 信息总线配置 rabbitmq配置
+#      SPRING_RABBITMQ_HOST: localhost
+#      SPRING_RABBITMQ_PORT: 5672
+#      SPRING_RABBITMQ_USERNAME: guest
+#      SPRING_RABBITMQ_PASSWORD: guest
+#      SPRING_CLOUD_BUS_ENABLED: "true"
+#      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
+#
+#  server-hello-2:
+#    build: ./server-feign
+#    restart: always
+#    expose:
+#      - "7041"
+#    environment:
+#      # 配置中心客户端配置
+#      SPRING_CLOUD_CONFIG_LABEL: master
+#      SPRING_CLOUD_CONFIG_PROFILE: dev
+#      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
+#      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
+#      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
+#      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
+#      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
+#      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
+#      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
+#
+#      # 信息总线配置 rabbitmq配置
+#      SPRING_RABBITMQ_HOST: localhost
+#      SPRING_RABBITMQ_PORT: 5672
+#      SPRING_RABBITMQ_USERNAME: guest
+#      SPRING_RABBITMQ_PASSWORD: guest
+#      SPRING_CLOUD_BUS_ENABLED: "true"
+#      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
+#
+#
+#################################           zuul网关        ########################################
+#
+#  server-hello-2:
+#    build: ./server-zuul
+#    restart: always
+#    ports:
+#      - "7070:7070"
+#    expose:
+#      - "7070"
+#    environment:
+#      # 配置中心客户端配置
+#      SPRING_CLOUD_CONFIG_LABEL: master
+#      SPRING_CLOUD_CONFIG_PROFILE: dev
+#      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
+#      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
+#      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
+#      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
+#      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
+#      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
+#      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
+#
+#      # 信息总线配置 rabbitmq配置
+#      SPRING_RABBITMQ_HOST: localhost
+#      SPRING_RABBITMQ_PORT: 5672
+#      SPRING_RABBITMQ_USERNAME: guest
+#      SPRING_RABBITMQ_PASSWORD: guest
+#      SPRING_CLOUD_BUS_ENABLED: "true"
+#      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
