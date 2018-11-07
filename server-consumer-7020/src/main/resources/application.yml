@@ -1,7 +1,0 @@
-server:
-  port: 7020
-spring:
-  application:
-    name: server-consumer
-info:
-  version: @project.version@ # 显示版本信息

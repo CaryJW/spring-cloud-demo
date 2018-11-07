@@ -12,14 +12,14 @@
 
   <!-- 被聚合的子模块索引 -->
   <modules>
-    <module>admin-server-7001</module>
-    <module>eureka-server-7000-7004</module>
-    <module>config-server-7002-7003</module>
-    <module>server-hello-7010</module>
-    <module>server-hello-7011</module>
-    <module>server-consumer-7020</module>
-    <module>server-feign-7021</module>
-    <module>server-zuul-7030</module>
+    <module>admin-server</module>
+    <module>eureka-server</module>
+    <module>config-server</module>
+    <module>server-hello</module>
+    <module>server-hello-2</module>
+    <module>server-consumer</module>
+    <module>server-feign</module>
+    <module>server-zuul</module>
   </modules>
 
   <!-- 被继承 -->

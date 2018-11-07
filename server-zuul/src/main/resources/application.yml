@@ -1,0 +1,8 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: server-zuul
+info:
+  version: @project.version@ # 显示版本信息
+

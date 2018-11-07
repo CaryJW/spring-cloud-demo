@@ -1,0 +1,7 @@
+server:
+  port: 7030
+spring:
+  application:
+    name: server-hello
+info:
+  version: @project.version@ # 显示版本信息

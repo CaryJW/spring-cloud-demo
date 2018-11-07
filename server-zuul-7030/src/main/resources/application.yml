@@ -1,8 +1,0 @@
-server:
-  port: 7030
-spring:
-  application:
-    name: server-zuul
-info:
-  version: @project.version@ # 显示版本信息
-

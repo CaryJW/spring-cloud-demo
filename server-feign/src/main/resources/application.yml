@@ -1,0 +1,7 @@
+server:
+  port: 7041
+spring:
+  application:
+    name: server-feign
+info:
+  version: @project.version@ # 显示版本信息
