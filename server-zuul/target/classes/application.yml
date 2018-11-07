@@ -1,0 +1,8 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: server-zuul
+info:
+  version: 0.0.1-SNAPSHOT # 显示版本信息
+

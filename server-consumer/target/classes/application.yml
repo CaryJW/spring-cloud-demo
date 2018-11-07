@@ -1,0 +1,7 @@
+server:
+  port: 7040
+spring:
+  application:
+    name: server-consumer
+info:
+  version: 0.0.1-SNAPSHOT # 显示版本信息

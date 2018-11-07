@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: eureka-server
+#  profiles:
+#    active: peer1
+eureka:
+  instance:
+    lease-expiration-duration-in-seconds: 30 # 发呆时间，即服务续约到期时间（缺省为90s）
+    lease-renewal-interval-in-seconds: 10 # 心跳时间，即服务续约间隔时间（缺省为30s）
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  #暴露所有 endpoints
+  endpoint:
+    health:
+      show-details: always
+info:
+  version: 0.0.1-SNAPSHOT
+#      1）springboot项目如果没有指定spring-boot-starter-parent的话，而且想要在配置文件yml或properties上使用@@来获取其它信息等，你就需要在build上增加如下配置：（这个问题就是我公司里的项目上的问题）项目启动或者打包时，IDE会自动将maven信息替换给application配置文件。
+#
+#  <resources>
+#      <resource>
+#          <directory>src/main/resources</directory>
+#          <filtering>true</filtering>
+#      </resource>
+#  </resources>
+#
+#      2）如果你的项目有继承spring-boot-starter-parent的话，就不用加上面的配置信息。

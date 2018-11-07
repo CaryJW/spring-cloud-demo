@@ -55,21 +55,38 @@
     </dependency>
   </dependencies>
 
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>com.spotify</groupId>
-        <artifactId>docker-maven-plugin</artifactId>
-        <version>1.2.0</version>
+  <!--<build>-->
+    <!--<plugins>-->
+      <!--<plugin>-->
+        <!--<groupId>com.spotify</groupId>-->
+        <!--<artifactId>docker-maven-plugin</artifactId>-->
+        <!--<version>1.2.0</version>-->
 
-        <!--使用 maven 构建Docker镜像 -->
+        <!--&lt;!&ndash;使用 maven 构建Docker镜像 &ndash;&gt;-->
+        <!--&lt;!&ndash;<configuration>&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;镜像的名字&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;<imageName>${docker.image.prefix}/${project.artifactId}</imageName>&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;基础镜像&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;<baseImage>java</baseImage>&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;配置容器启动后执行的命令&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;指那些需要和 Dockerfile 放在一起，在构建镜像时使用的文件，一般应用 jar 包需要纳入。&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;<resources>&ndash;&gt;-->
+            <!--&lt;!&ndash;<resource>&ndash;&gt;-->
+              <!--&lt;!&ndash;<targetPath>/</targetPath>&ndash;&gt;-->
+              <!--&lt;!&ndash;<directory>${project.build.directory}</directory>&ndash;&gt;-->
+              <!--&lt;!&ndash;<include>${project.build.finalName}.jar</include>&ndash;&gt;-->
+            <!--&lt;!&ndash;</resource>&ndash;&gt;-->
+          <!--&lt;!&ndash;</resources>&ndash;&gt;-->
+        <!--&lt;!&ndash;</configuration>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;使用 Dockerfile 构建 Docker镜像&ndash;&gt;-->
         <!--<configuration>-->
           <!--&lt;!&ndash;镜像的名字&ndash;&gt;-->
           <!--<imageName>${docker.image.prefix}/${project.artifactId}</imageName>-->
-          <!--&lt;!&ndash;基础镜像&ndash;&gt;-->
-          <!--<baseImage>java</baseImage>-->
-          <!--&lt;!&ndash;配置容器启动后执行的命令&ndash;&gt;-->
-          <!--<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>-->
+          <!--&lt;!&ndash;使用 docker-compose 构建可注释&ndash;&gt;-->
+          <!--&lt;!&ndash;指定 Dockerfile 的位置&ndash;&gt;-->
+          <!--&lt;!&ndash;<dockerDirectory>${project.dockerFileDir}</dockerDirectory>&ndash;&gt;-->
           <!--&lt;!&ndash;指那些需要和 Dockerfile 放在一起，在构建镜像时使用的文件，一般应用 jar 包需要纳入。&ndash;&gt;-->
           <!--<resources>-->
             <!--<resource>-->
@@ -79,22 +96,30 @@
             <!--</resource>-->
           <!--</resources>-->
         <!--</configuration>-->
+      <!--</plugin>-->
+    <!--</plugins>-->
+  <!--</build>-->
 
-        <!--使用 Dockerfile 构建 Docker镜像-->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <!--显示应用版本信息-->
+        <executions>
+          <execution>
+            <goals>
+              <goal>build-info</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <!--镜像的名字-->
-          <imageName>${docker.image.prefix}/${project.artifactId}</imageName>
-          <!--使用 docker-compose 构建可注释-->
-          <!--指定 Dockerfile 的位置-->
-          <!--<dockerDirectory>${project.dockerFileDir}</dockerDirectory>-->
-          <!--指那些需要和 Dockerfile 放在一起，在构建镜像时使用的文件，一般应用 jar 包需要纳入。-->
-          <resources>
-            <resource>
-              <targetPath>/</targetPath>
-              <directory>${project.build.directory}</directory>
-              <include>${project.build.finalName}.jar</include>
-            </resource>
-          </resources>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
         </configuration>
       </plugin>
     </plugins>

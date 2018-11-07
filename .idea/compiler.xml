@@ -7,50 +7,24 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="admin-server" />
-        <module name="admin-server-7001" />
         <module name="config-server" />
-        <module name="config-server-7002-7003" />
         <module name="eureka-server" />
-        <module name="eureka-server-7000-7004" />
         <module name="server-consumer" />
-        <module name="server-consumer-7020" />
         <module name="server-feign" />
-        <module name="server-feign-7021" />
-        <module name="server-hello-2" />
-        <module name="server-hello-7010" />
-        <module name="server-zuul" />
-        <module name="server-zuul-7030" />
-      </profile>
-      <profile name="Annotation profile for spring-cloud-admin-demo" enabled="true">
-        <sourceOutputDir name="../server-hello-7011/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../server-hello-7011/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="server-hello-7011" />
-      </profile>
-      <profile name="Annotation profile for server-hello" enabled="true">
-        <sourceOutputDir name="../server-hello-2/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../server-hello-2/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
         <module name="server-hello" />
+        <module name="server-hello-2" />
+        <module name="server-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="admin-server" target="1.8" />
-      <module name="admin-server-7001" target="1.8" />
       <module name="config-server" target="1.8" />
-      <module name="config-server-7002-7003" target="1.8" />
       <module name="eureka-server" target="1.8" />
-      <module name="eureka-server-7000-7004" target="1.8" />
       <module name="server-consumer" target="1.8" />
-      <module name="server-consumer-7020" target="1.8" />
       <module name="server-feign" target="1.8" />
-      <module name="server-feign-7021" target="1.8" />
       <module name="server-hello" target="1.8" />
       <module name="server-hello-2" target="1.8" />
-      <module name="server-hello-7010" target="1.8" />
-      <module name="server-hello-7011" target="1.8" />
       <module name="server-zuul" target="1.8" />
-      <module name="server-zuul-7030" target="1.8" />
       <module name="spring-cloud-admin-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -1,0 +1,24 @@
+server:
+  port: 7020
+spring:
+  application:
+    name: admin-server
+#  服务上下线邮箱通知
+#  mail:
+#    host: smtp.qq.com
+#    username: 943569813@qq.com
+#    password: sdrqyfbpdibkbdia # POP3/SMTP服务 授权码
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true # 开启用户身份验证
+#    default-encoding: UTF-8
+#    port: 465
+#  boot:
+#    admin:
+#      notify:
+#        mail:
+#          to: 1647622369@qq.com # 发送给谁
+#          from: 943569813@qq.com # 谁发出去的
+info:
+  version: 0.0.1-SNAPSHOT # 显示版本信息
