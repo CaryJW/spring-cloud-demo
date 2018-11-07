@@ -39,15 +39,15 @@ services:
 #      SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD:
       SPRING_CLOUD_CONFIG_LABEL:  master                                                    # 分支
 
-#  config-server-2:
-#      build: ./config-server/
-#      restart: always
-#      expose:
-#        "7011"
-#      environment:
-#        SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig
-#        SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo
-#        SPRING_CLOUD_CONFIG_LABEL:  master # 分支
+  config-server-2:
+      build: ./config-server/
+      restart: always
+      expose:
+        - "7011"
+      environment:
+        SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig
+        SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo
+        SPRING_CLOUD_CONFIG_LABEL:  master # 分支
 
 
 ###########################           spring-boot-admin        ####################################
@@ -184,9 +184,9 @@ services:
     build: ./server-zuul
     restart: always
     ports:
-      - "8080:8080"
+      - "7070:7070"
     expose:
-      - "8080"
+      - "7070"
     environment:
       # 配置中心客户端配置
       SPRING_CLOUD_CONFIG_LABEL: master
