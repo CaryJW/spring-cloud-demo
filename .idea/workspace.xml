@@ -2,7 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="daf7db9f-83cd-46de-9d13-f586d17fc0e8" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/admin-server/target/classes/META-INF/build-info.properties" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin-server/target/classes/application.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin-server/target/classes/bootstrap.yml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin-server/target/classes/bootstrap.yml.bak" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin-server/target/classes/com/flyxiaozhu/adminserver/AdminServerApplication$SecurityPermitAllConfig.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin-server/target/classes/com/flyxiaozhu/adminserver/AdminServerApplication$SecuritySecureConfig.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin-server/target/classes/com/flyxiaozhu/adminserver/AdminServerApplication.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin-server/target/classes/logback.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin-server/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/admin-server/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/server-hello/target/" />
     <ignored path="$PROJECT_DIR$/server-hello-2/target/" />
@@ -235,12 +245,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1541581064452</updated>
-      <workItem from="1541581065932" duration="1847000" />
+      <workItem from="1541581065932" duration="2431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1847000" />
+    <option name="totallyTimeSpent" value="2431000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
