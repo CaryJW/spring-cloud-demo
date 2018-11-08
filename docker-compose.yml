@@ -127,7 +127,7 @@ services:
 
 ################################           服务消费者        ########################################
 
-  server-hello-2:
+  server-consumer:
     build: ./server-consumer
     restart: always
     expose:
@@ -152,7 +152,7 @@ services:
       SPRING_CLOUD_BUS_ENABLED: "true"
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
-  server-hello-2:
+  server-feign:
     build: ./server-feign
     restart: always
     expose:
@@ -180,7 +180,7 @@ services:
 
 ################################           zuul网关        ########################################
 
-  server-hello-2:
+  server-zuul:
     build: ./server-zuul
     restart: always
     ports:
