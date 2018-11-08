@@ -92,10 +92,10 @@ services:
       SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
 
       # 信息总线配置 rabbitmq配置
-      SPRING_RABBITMQ_HOST: localhost
+      SPRING_RABBITMQ_HOST: 127.0.0.1
       SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
       SPRING_CLOUD_BUS_ENABLED: "true"
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
@@ -117,10 +117,10 @@ services:
       SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
 
       # 信息总线配置 rabbitmq配置
-      SPRING_RABBITMQ_HOST: localhost
+      SPRING_RABBITMQ_HOST: 127.0.0.1
       SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
       SPRING_CLOUD_BUS_ENABLED: "true"
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
@@ -145,10 +145,10 @@ services:
       SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
 
       # 信息总线配置 rabbitmq配置
-      SPRING_RABBITMQ_HOST: localhost
+      SPRING_RABBITMQ_HOST: 127.0.0.1
       SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
       SPRING_CLOUD_BUS_ENABLED: "true"
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
@@ -170,10 +170,10 @@ services:
       SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
 
       # 信息总线配置 rabbitmq配置
-      SPRING_RABBITMQ_HOST: localhost
+      SPRING_RABBITMQ_HOST: 127.0.0.1
       SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
       SPRING_CLOUD_BUS_ENABLED: "true"
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
@@ -200,9 +200,9 @@ services:
       SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
 
       # 信息总线配置 rabbitmq配置
-      SPRING_RABBITMQ_HOST: localhost
+      SPRING_RABBITMQ_HOST: 127.0.0.1
       SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: guest
-      SPRING_RABBITMQ_PASSWORD: guest
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
       SPRING_CLOUD_BUS_ENABLED: "true"
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
