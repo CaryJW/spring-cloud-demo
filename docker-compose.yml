@@ -9,8 +9,6 @@ services:
     # always (当容器退出时docker自动重启它)
     # on-failure:10 (当容器非正常退出, 最多自动重启10次, 10之后不再重启)
     restart: always                       # 总是重启
-    ports:                                # 端口映射 另一个暴露端口 expose提供container之间的端口访问，不会暴露给主机使用
-      - "7000:7000"
     expose:                               # 暴露端口，只提供容器间访问，不暴露给主机
       - "7000"
     environment:                          # 环境变量
@@ -24,8 +22,6 @@ services:
     build: ./eureka-server/
     image: eureka-server:springcloud
     restart: always
-    ports:
-      - "7001:7001"
     expose:
       - "7001"
     environment:
@@ -82,7 +78,7 @@ services:
     image: admin-server:springcloud
     restart: always
     ports:
-      - "7020:7020"
+      - "7020:7020"                                             # 端口映射
     expose:
       - "7020"
     environment:

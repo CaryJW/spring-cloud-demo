@@ -1,10 +1,6 @@
 spring:
   application:
     name: eureka-server
-  security:
-    user:
-      name: flyxiaozhu
-      password: 123456
 #  profiles:
 #    active: peer1
 eureka:

@@ -36,12 +36,6 @@
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
 
-    <!--增加安全控制的依赖-->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-security</artifactId>
-    </dependency>
-
     <!--JMX-bean 管理所需依赖-->
     <dependency>
       <groupId>org.jolokia</groupId>
