@@ -12,7 +12,8 @@ public class HelloController {
     HelloService helloService;
 
     @RequestMapping("/hello")
-    public String hi(@RequestParam(value = "name",defaultValue = "flyxiaozhu") String name){
-        return helloService.hiService(name);
+    public String hi(@RequestParam(value = "name", defaultValue = "flyxiaozhu") String name) {
+//        return helloService.hiService(name);
+        return "ok";
     }
 }
