@@ -65,7 +65,7 @@ services:
       expose:
         - "7011"
       environment:
-        SPRING_PROFILES_ACTIVE: config1
+        SPRING_PROFILES_ACTIVE: config2
 
         SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig
         SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo
