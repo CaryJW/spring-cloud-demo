@@ -1,0 +1,6 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://flyxiaozhu:123456@eureka-server-1:7000/eureka/
+
+
