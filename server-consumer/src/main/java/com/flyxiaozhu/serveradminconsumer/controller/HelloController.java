@@ -13,7 +13,6 @@ public class HelloController {
 
     @RequestMapping("/hello")
     public String hi(@RequestParam(value = "name", defaultValue = "flyxiaozhu") String name) {
-//        return helloService.hiService(name);
-        return "ok";
+        return helloService.hiService(name);
     }
 }
