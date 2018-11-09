@@ -1,0 +1,4 @@
+server:
+  port: 7011
+spring:
+  profiles: config2
