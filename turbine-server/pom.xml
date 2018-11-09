@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.flyxiaozhu</groupId>
-	<artifactId>server-hello</artifactId>
+	<artifactId>turbine-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>server-hello</name>
+	<name>turbine-server</name>
 	<description>Demo project for Spring Boot</description>
 
   <parent>
@@ -18,11 +18,11 @@
   </parent>
 
 	<dependencies>
-    <!--基于eureka搭建 spring-boot-admin 则不需要该依赖-->
-		<!--<dependency>-->
-			<!--<groupId>de.codecentric</groupId>-->
-			<!--<artifactId>spring-boot-admin-starter-client</artifactId>-->
-		<!--</dependency>-->
+    <!--Hystrix 集群监控-->
+    <dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-turbine</artifactId>
+		</dependency>
 
     <!--eureka-client 依赖 -->
     <dependency>
@@ -48,32 +48,10 @@
       <artifactId>spring-cloud-starter-config</artifactId>
     </dependency>
 
-    <!--信息总线-->
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-    </dependency>
-
-    <!--获取git文件失败重启的依赖-->
-    <dependency>
-      <groupId>org.springframework.retry</groupId>
-      <artifactId>spring-retry</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-aop</artifactId>
-    </dependency>
-
     <!--JMX-bean 管理所需依赖-->
     <dependency>
       <groupId>org.jolokia</groupId>
       <artifactId>jolokia-core</artifactId>
-    </dependency>
-
-    <!--zipkin客户端客户端依赖-->
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-zipkin</artifactId>
     </dependency>
 	</dependencies>
 

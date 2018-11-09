@@ -5,6 +5,7 @@ services:
   eureka-server-1:                        # 自定义服务名--注册中心
 #    image: flyxiaozhu/eureka-server      # 镜像名称
     build: ./eureka-server/               # 通过Dockerfile自行构建
+    image: erreka-server:springcloud
     restart: always                       # 总是重启
     ports:                                # 端口映射 另一个暴露端口 expose提供container之间的端口访问，不会暴露给主机使用
       - "7000:7000"
@@ -13,8 +14,13 @@ services:
     environment:                          # 环境变量
       SPRING_PROFILES_ACTIVE: peer1       # 自定义参数用于给服务的配置文件传递参数
 
+      # zipkin 客户端配置
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
+      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+
   eureka-server-2:
     build: ./eureka-server/
+    image: erreka-server:springcloud
     restart: always
     ports:
       - "7001:7001"
@@ -23,11 +29,16 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: peer2
 
+      # zipkin 客户端配置
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
+      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+
 
 ###########################           分布式配置中心         ####################################
 
   config-server-1:
     build: ./config-server/
+    image: config-server:springcloud
     restart: always
     expose:
       - "7010"
@@ -39,8 +50,13 @@ services:
 #      SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD:
       SPRING_CLOUD_CONFIG_LABEL:  master                                                    # 分支
 
+      # zipkin 客户端配置
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411                                     # 指定server端的地址
+      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0                                         # 指定采样百分比，默认0.1，改成1.0表示所有数据都采用
+
   config-server-2:
       build: ./config-server/
+      image: config-server:springcloud
       restart: always
       expose:
         - "7011"
@@ -49,11 +65,15 @@ services:
         SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo
         SPRING_CLOUD_CONFIG_LABEL:  master # 分支
 
+        SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
+        SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+
 
 ###########################           spring-boot-admin        ####################################
 
   admin-server:
     build: ./admin-server/
+    image: admin-server:springcloud
     restart: always
     ports:
       - "7020:7020"
@@ -76,6 +96,7 @@ services:
 
   server-hello-1:
     build: ./server-hello
+    image: server-hello:springcloud
     restart: always
     expose:
       - "7030"
@@ -99,8 +120,13 @@ services:
       SPRING_CLOUD_BUS_ENABLED: "true"
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
+      # zipkin 客户端配置
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
+      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+
   server-hello-2:
     build: ./server-hello-2
+    image: server-hello:springcloud
     restart: always
     expose:
       - "7031"
@@ -124,11 +150,16 @@ services:
       SPRING_CLOUD_BUS_ENABLED: "true"
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
+      # zipkin 客户端配置
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
+      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+
 
 ################################           服务消费者        ########################################
 
-  server-consumer:
-    build: ./server-consumer
+  ribbon-server:
+    build: ./ribbon-server
+    image: ribbon-server:springcloud
     restart: always
     expose:
       - "7040"
@@ -152,8 +183,13 @@ services:
       SPRING_CLOUD_BUS_ENABLED: "true"
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
-  server-feign:
-    build: ./server-feign
+      # zipkin 客户端配置
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
+      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+
+  feign-server:
+    build: ./feign-server
+    image: feign-server:springcloud
     restart: always
     expose:
       - "7041"
@@ -177,11 +213,15 @@ services:
       SPRING_CLOUD_BUS_ENABLED: "true"
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
+      # zipkin 客户端配置
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
+      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
 
 ################################           zuul网关        ########################################
 
-  server-zuul:
-    build: ./server-zuul
+  zuul-server:
+    build: ./zuul-server
+    image: zuul-server:springcloud
     restart: always
     ports:
       - "7070:7070"
@@ -206,3 +246,34 @@ services:
       SPRING_RABBITMQ_PASSWORD: 1120zh.+
       SPRING_CLOUD_BUS_ENABLED: "true"
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
+
+      # zipkin 客户端配置
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
+      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+
+
+################################           Hystrix 监控集群        ######################################
+
+  server-zuul:
+    build: ./turbine-server
+    image: turbine-server:springcloud
+    restart: always
+    ports:
+      - "7050:7050"
+    expose:
+      - "7050"
+
+
+################################           spring cloud sleuth 链路跟踪        ######################################
+
+
+  zipkin-server:
+    image: openzipkin/zipkin
+    image: zipkin-server:springcloud
+    restart: always
+    ports:
+      - "9411:9411"
+    expose:
+      - "9411"
+
+

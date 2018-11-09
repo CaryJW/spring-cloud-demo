@@ -1,15 +1,26 @@
 spring:
   application:
     name: eureka-server
+  security:
+    user:
+      name: flyxiaozhu
+      password: 123456
 #  profiles:
 #    active: peer1
 eureka:
   instance:
     lease-expiration-duration-in-seconds: 30 # 发呆时间，即服务续约到期时间（缺省为90s）
-    lease-renewal-interval-in-seconds: 10 # 心跳时间，即服务续约间隔时间（缺省为30s）
+    lease-renewal-interval-in-seconds: 10    # 心跳时间，即服务续约间隔时间（缺省为30s）
+#  server:
+#    enable-self-preservation: false          # 关闭自我保护 默认打开
+#    eviction-interval-timer-in-ms: 5000      # 清理服务器  续期时间，即扫描失效服务的间隔时间（缺省为60s）
+#  client:
+#    healthcheck:
+#      enabled: true                          # 开启健康检查（依赖spring-boot-starter-actuator）
 management:
   endpoints:
     web:
+      base-path: /actuator    # 修改访问路径  2.0之前默认是/   2.0默认是 /actuator  可以通过这个属性值修改
       exposure:
         include: "*"  #暴露所有 endpoints
   endpoint:

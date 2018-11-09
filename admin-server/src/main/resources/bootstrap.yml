@@ -1,7 +1,7 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server-1:7000/eureka/ #注册地址 如果服务器端设置安全认证了 客户端在在配置defaultZone的时候需要带上用户名、密码
+      defaultZone: http://flyxiaozhu:123456@eureka-server-1:7000/eureka/ #注册地址 如果服务器端设置安全认证了 客户端在在配置defaultZone的时候需要带上用户名、密码
 
 
 

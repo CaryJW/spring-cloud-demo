@@ -17,9 +17,10 @@
     <module>config-server</module>
     <module>server-hello</module>
     <module>server-hello-2</module>
-    <module>server-consumer</module>
-    <module>server-feign</module>
-    <module>server-zuul</module>
+    <module>ribbon-server</module>
+    <module>feign-server</module>
+    <module>zuul-server</module>
+    <module>turbine-server</module>
   </modules>
 
   <!-- 被继承 -->
