@@ -249,7 +249,7 @@ services:
 
 ################################           Hystrix 监控集群        ######################################
 
-  server-zuul:
+  hystrix-dashboard:
     build: ./turbine-server
     image: turbine-server:springcloud
     restart: always
