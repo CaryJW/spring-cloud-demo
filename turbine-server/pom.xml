@@ -36,12 +36,6 @@
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
 
-    <!--web 组件依赖-->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-
     <!--config-client 依赖-->
     <dependency>
       <groupId>org.springframework.cloud</groupId>

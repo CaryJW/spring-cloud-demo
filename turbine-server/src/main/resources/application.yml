@@ -2,7 +2,7 @@ server:
   port: 7050
 spring:
   application:
-    name: server-turbine
+    name: turbine-server
 info:
   version: @project.version@ # 显示版本信息
 turbine:
