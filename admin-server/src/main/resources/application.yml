@@ -31,15 +31,15 @@ eureka:
     metadata-map:                   # 注册给eureka的时候告诉eureka自己的密码
       user.name: ${sppring.security.user.name}
       user.password: ${sppring.security.user.password}
-management:
-  endpoints:
+#management:
+#  endpoints:
 #    web:
 #      base-path: /actuator
-      exposure:
-        include: "*" #暴露所有 endpoints
-  endpoint:
-    health:
-      show-details: always
-info:
-  version: @project.version@ # 显示版本信息
+#      exposure:
+#        include: "*" #暴露所有 endpoints
+#  endpoint:
+#    health:
+#      show-details: always
+#info:
+#  version: @project.version@ # 显示版本信息
 
