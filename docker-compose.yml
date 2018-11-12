@@ -23,6 +23,10 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: peer2
 
+      # zipkin 客户端配置
+      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
+      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+
 
 ###########################           分布式配置中心         ####################################
 
@@ -101,10 +105,8 @@ services:
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: https://trace-server:7060
+      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
-
-      SPRING_ZIPKIN_BASE-URL:
 
   server-hello-2:
     build: ./server-hello-2
@@ -133,7 +135,7 @@ services:
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: https://trace-server:7060
+      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
 
 
@@ -166,7 +168,7 @@ services:
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: https://trace-server:7060
+      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
 
   feign-server:
@@ -196,7 +198,7 @@ services:
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: https://trace-server:7060
+      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
 
 ################################           zuul网关        ########################################
@@ -230,7 +232,7 @@ services:
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: https://trace-server:7060
+      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
 
 
