@@ -20,5 +20,27 @@ spring:
 #        mail:
 #          to: 1647622369@qq.com # 发送给谁
 #          from: 943569813@qq.com # 谁发出去的
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-1:7000/eureka/,http://eureka-server-2:7001/eureka/
+  instance:
+    lease-renewal-interval-in-seconds: 10 # 心跳时间，即服务续约间隔时间（缺省为30s）
+    lease-expiration-duration-in-seconds: 30 # 发呆时间，即服务续约到期时间（缺省为90s）
+    metadata-map:                   # 注册给eureka的时候告诉eureka自己的密码
+      user.name: ${sppring.security.user.name}
+      user.password: ${sppring.security.user.password}
+  client:
+    registry-fetch-interval-seconds: 5 #表示eureka client间隔多久去拉取服务注册信息，默认为30秒
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*" #暴露所有 endpoints
+  endpoint:
+    health:
+      show-details: always
 info:
   version: @project.version@ # 显示版本信息
+

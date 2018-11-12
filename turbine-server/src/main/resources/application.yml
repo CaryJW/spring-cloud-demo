@@ -7,7 +7,7 @@ info:
   version: @project.version@ # 显示版本信息
 turbine:
   aggregator:
-    cluster-config: defauult # 指定聚合哪些集群，多个使用","分割，默认为default
+    cluster-config: default # 指定聚合哪些集群，多个使用","分割，默认为default
   app-config: server-ribbon,server-feign  # 配置Eureka中的serviceId列表，表明监控哪些服务
   clusterNameExpression: new String("default")
 
@@ -19,7 +19,7 @@ turbine:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server-1:7000/eureka/
+      defaultZone: http://eureka-server-1:7000/eureka/,http://eureka-server-2:7001/eureka/
     healthcheck:
       enabled: true # 开启健康检查（依赖spring-boot-starter-actuator）
   instance:

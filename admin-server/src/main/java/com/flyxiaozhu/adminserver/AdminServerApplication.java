@@ -15,7 +15,6 @@ import org.springframework.security.web.authentication.SavedRequestAwareAuthenti
 @SpringBootApplication
 @EnableAdminServer // 开启监控功能
 @EnableEurekaClient //注册到 Eureka
-@RefreshScope // 开启配置自动刷新功能
 public class AdminServerApplication {
 
 	public static void main(String[] args) {
