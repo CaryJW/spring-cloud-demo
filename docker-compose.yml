@@ -242,7 +242,7 @@ services:
 
 ################################           Hystrix 监控集群        ######################################
 
-  hystrix-dashboard:
+  turbine-server:
     build: ./turbine-server
     image: turbine-server:springcloud
     restart: always

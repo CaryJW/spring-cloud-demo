@@ -23,3 +23,7 @@ management:
   endpoint:
     health:
       show-details: always
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
