@@ -3,8 +3,6 @@ server:
 spring:
   application:
     name: trace-server
-info:
-  version: @project.version@ # 显示版本信息
 eureka:
   client:
     service-url:
@@ -27,3 +25,8 @@ management:
     web:
       server:
         auto-time-requests: false
+info:
+  app:
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"

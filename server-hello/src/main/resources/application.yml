@@ -3,7 +3,3 @@ server:
 spring:
   application:
     name: server-hello
-  zipkin:
-    base-url:
-info:
-  version: @project.version@ # 显示版本信息

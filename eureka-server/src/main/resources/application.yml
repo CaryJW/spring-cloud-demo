@@ -23,7 +23,10 @@ management:
     health:
       show-details: always
 info:
-  version: @project.version@
+  app:
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"
 #      1）springboot项目如果没有指定spring-boot-starter-parent的话，而且想要在配置文件yml或properties上使用@@来获取其它信息等，你就需要在build上增加如下配置：（这个问题就是我公司里的项目上的问题）项目启动或者打包时，IDE会自动将maven信息替换给application配置文件。
 #
 #  <resources>
