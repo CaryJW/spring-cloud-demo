@@ -48,6 +48,12 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
+    <!--服务链路追踪-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-sleuth</artifactId>
+    </dependency>
+
     <!--zipkin客户端客户端依赖-->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
