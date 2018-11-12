@@ -16,25 +16,6 @@ services:
     environment:                          # 环境变量
       SPRING_PROFILES_ACTIVE: peer1       # 自定义参数用于给服务的配置文件传递参数
 
-
-###########################           分布式配置中心         ####################################
-
-  config-server-1:
-    build: ./config-server/
-    image: config-server:springcloud
-    restart: always
-    expose:
-      - "7010"
-    environment:
-      SPRING_PROFILES_ACTIVE: config1
-
-      # git 仓库配置
-      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig   # 配置git仓库的地址
-      SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo                                   # git仓库地址下的相对地址，可以配置多个，用,分割。
-#      SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME:                                             # git仓库的用户和密码
-#      SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD:
-      SPRING_CLOUD_CONFIG_LABEL:  master                                                    # 分支
-
 ###########################           spring-boot-admin        ####################################
 
   admin-server:
