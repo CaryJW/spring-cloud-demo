@@ -14,10 +14,6 @@ services:
     environment:                          # 环境变量
       SPRING_PROFILES_ACTIVE: peer1       # 自定义参数用于给服务的配置文件传递参数
 
-       # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060                                   # 指定server端的地址
-      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0                                         # 指定采样百分比，默认0.1，改成1.0表示所有数据都采用
-
   eureka-server-2:
     build: ./eureka-server/
     image: eureka-server:springcloud
@@ -26,10 +22,6 @@ services:
       - "7001"
     environment:
       SPRING_PROFILES_ACTIVE: peer2
-
-      # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
-      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
 
 
 ###########################           分布式配置中心         ####################################
