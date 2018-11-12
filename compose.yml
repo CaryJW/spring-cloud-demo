@@ -1,0 +1,122 @@
+version: '2'
+services:
+###########################           服务注册和发现          ####################################
+
+  eureka-server-1:                        # 自定义服务名--注册中心
+#    image: flyxiaozhu/eureka-server      # 镜像名称
+    build: ./eureka-server/               # 通过Dockerfile自行构建
+    image: eureka-server:springcloud
+    # always (当容器退出时docker自动重启它)
+    # on-failure:10 (当容器非正常退出, 最多自动重启10次, 10之后不再重启)
+    restart: always                       # 总是重启
+    ports:
+      - "7000:7000"
+    expose:                               # 暴露端口，只提供容器间访问，不暴露给主机
+      - "7000"
+    environment:                          # 环境变量
+      SPRING_PROFILES_ACTIVE: peer1       # 自定义参数用于给服务的配置文件传递参数
+
+      # zipkin 客户端配置
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
+      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+
+
+###########################           分布式配置中心         ####################################
+
+  config-server-1:
+    build: ./config-server/
+    image: config-server:springcloud
+    restart: always
+    expose:
+      - "7010"
+    environment:
+      SPRING_PROFILES_ACTIVE: config1
+
+      # git 仓库配置
+      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig   # 配置git仓库的地址
+      SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo                                   # git仓库地址下的相对地址，可以配置多个，用,分割。
+#      SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME:                                             # git仓库的用户和密码
+#      SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD:
+      SPRING_CLOUD_CONFIG_LABEL:  master                                                    # 分支
+
+
+###########################           spring-boot-admin        ####################################
+
+  admin-server:
+    build: ./admin-server/
+    image: admin-server:springcloud
+    restart: always
+    ports:
+      - "7020:7020"                                             # 端口映射
+    expose:
+      - "7020"
+    environment:
+      # 配置中心客户端配置
+      SPRING_CLOUD_CONFIG_LABEL: master
+      SPRING_CLOUD_CONFIG_PROFILE: dev
+      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"             # 从配置中心读取文件
+      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server   # 配置中心的serviceId
+      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"                     # 获取文件失败重试
+      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000          # 最初重试间隔为 1000 毫秒
+      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6                 # 最多重试 6 次
+      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000              # 最长重试间隔为 2000 毫秒
+      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1                 # 每次重试失败后，重试间隔所增加的倍数
+
+
+################################           服务提供者        ########################################
+
+  server-hello-1:
+    build: ./server-hello
+    image: server-hello-1:springcloud
+    restart: always
+    expose:
+      - "7030"
+    environment:
+      # 配置中心客户端配置
+      SPRING_CLOUD_CONFIG_LABEL: master
+      SPRING_CLOUD_CONFIG_PROFILE: dev
+      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
+      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
+      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
+      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
+      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
+      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
+      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
+
+      # 信息总线配置 rabbitmq配置
+      SPRING_RABBITMQ_HOST: 192.168.1.250
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
+      SPRING_CLOUD_BUS_ENABLED: "true"
+      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
+
+      # zipkin 客户端配置
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
+      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+
+  server-hello-2:
+    build: ./server-hello-2
+    image: server-hello-2:springcloud
+    restart: always
+    expose:
+      - "7031"
+    environment:
+      # 配置中心客户端配置
+      SPRING_CLOUD_CONFIG_LABEL: master
+      SPRING_CLOUD_CONFIG_PROFILE: dev
+      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
+      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
+      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
+      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
+      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
+      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
+      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
+
+      # 信息总线配置 rabbitmq配置
+      SPRING_RABBITMQ_HOST: 192.168.1.250
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
+      SPRING_CLOUD_BUS_ENABLED: "true"
+      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
