@@ -29,8 +29,8 @@ eureka:
     lease-renewal-interval-in-seconds: 10 # 心跳时间，即服务续约间隔时间（缺省为30s）
     lease-expiration-duration-in-seconds: 30 # 发呆时间，即服务续约到期时间（缺省为90s）
     metadata-map:                   # 注册给eureka的时候告诉eureka自己的密码
-      user.name: ${spring.security.user.name}
-      user.password: ${spring.security.user.password}
+      user.name: ${sppring.security.user.name}
+      user.password: ${sppring.security.user.password}
 management:
   endpoints:
     web:
