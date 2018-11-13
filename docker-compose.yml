@@ -198,6 +198,8 @@ services:
     build: ./feign-server
     image: feign-server:springcloud
     restart: always
+    ports:
+      - "7041:7041"
     expose:
       - "7041"
     environment:

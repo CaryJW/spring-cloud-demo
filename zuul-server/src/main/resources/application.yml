@@ -4,3 +4,21 @@ spring:
   application:
     name: zuul-server
 
+
+zuul:
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 60000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000  # 断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
+
+ribbon:
+  ReadTimeout: 10000  # 获取或设置读取操作未完成时发生超时之前的毫秒数
+  ConnectTimeout: 10000  # 客户端等待与服务器建立连接的时间（以毫秒计）
+

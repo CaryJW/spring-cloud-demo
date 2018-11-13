@@ -15,7 +15,6 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableHystrix // 开启短路器
-@EnableHystrixDashboard // 开启短路器监控
 @RefreshScope
 public class RibbonServerApplication {
 
