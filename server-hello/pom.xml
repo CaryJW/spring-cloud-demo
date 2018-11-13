@@ -55,14 +55,14 @@
     <!--</dependency>-->
 
     <!--获取git文件失败重启的依赖-->
-    <dependency>
-      <groupId>org.springframework.retry</groupId>
-      <artifactId>spring-retry</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-aop</artifactId>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.springframework.retry</groupId>-->
+      <!--<artifactId>spring-retry</artifactId>-->
+    <!--</dependency>-->
+    <!--<dependency>-->
+      <!--<groupId>org.springframework.boot</groupId>-->
+      <!--<artifactId>spring-boot-starter-aop</artifactId>-->
+    <!--</dependency>-->
 
     <!--JMX-bean 管理所需依赖-->
     <dependency>
