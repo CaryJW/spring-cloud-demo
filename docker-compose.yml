@@ -266,7 +266,7 @@ services:
 ################################          Hystrix 监控面板         ######################################
 
   hystrix-dashboard:
-    build: ./hystrix-dashboard-feign
+    build: ./hystrix-dashboard
     image: hystrix-dashboard-feign:springcloud
     restart: always
     ports:
