@@ -1,5 +1,5 @@
 server:
-  port: 7060
+  port: 7050
 spring:
   application:
     name: turbine-server
