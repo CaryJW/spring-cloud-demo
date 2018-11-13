@@ -263,6 +263,18 @@ services:
       SPRING_ZIPKIN_SENDER_TYPE: web
 
 
+################################          Hystrix 监控面板         ######################################
+
+  hystrix-dashboard:
+    build: ./hystrix-dashboard-feign
+    image: hystrix-dashboard-feign:springcloud
+    restart: always
+    ports:
+      - "7050:7050"
+    expose:
+      - "7050"
+
+
 ################################           Hystrix 监控集群        ######################################
 
   turbine-server:
@@ -270,6 +282,6 @@ services:
     image: turbine-server:springcloud
     restart: always
     ports:
-      - "7050:7050"
+      - "7060:7060"
     expose:
-      - "7050"
+      - "7060"

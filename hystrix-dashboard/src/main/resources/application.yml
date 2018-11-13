@@ -1,0 +1,6 @@
+spring:
+  mail:
+    port: 7050
+spring:
+  application:
+    name: hystrix-dashboard
