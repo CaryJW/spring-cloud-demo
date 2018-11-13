@@ -3,3 +3,6 @@ server:
 spring:
   application:
     name: server-hello
+  zipkin:
+    sender:
+      type: web
