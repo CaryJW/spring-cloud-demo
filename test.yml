@@ -55,10 +55,6 @@ services:
       SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo
       SPRING_CLOUD_CONFIG_LABEL:  master
 
-      # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
-      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
-      SPRING_ZIPKIN_SENDER_TYPE: web
 
 ################################           服务提供者        ########################################
 
@@ -71,40 +67,29 @@ services:
     expose:
       - "7030"
     environment:
-#      # 配置中心客户端配置
-#      SPRING_CLOUD_CONFIG_LABEL: master
-#      SPRING_CLOUD_CONFIG_PROFILE: dev
-#      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
-#      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
-#      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
-#      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
-#      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
-#      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
-#      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
+      # 配置中心客户端配置
+      SPRING_CLOUD_CONFIG_LABEL: master
+      SPRING_CLOUD_CONFIG_PROFILE: dev
+      SPRING_CLOUD_CONFIG_DISCOVERY_ENABLED: "true"
+      SPRING_CLOUD_CONFIG_DISCOVERY_SERVICE-ID: config-server
+      SPRING_CLOUD_CONFIG_FAIL-FAST: "true"
+      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1000
+      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
+      SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
+      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
 
-#      # 信息总线配置 rabbitmq配置
-#      SPRING_RABBITMQ_HOST: 192.168.1.250
-#      SPRING_RABBITMQ_PORT: 5672
-#      SPRING_RABBITMQ_USERNAME: flyxiaozhu
-#      SPRING_RABBITMQ_PASSWORD: 1120zh.+
-#      SPRING_CLOUD_BUS_ENABLED: "true"
-#      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
+      # 信息总线配置 rabbitmq配置
+      SPRING_RABBITMQ_HOST: 192.168.1.250
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
+      SPRING_CLOUD_BUS_ENABLED: "true"
+      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
       SPRING_ZIPKIN_SENDER_TYPE: web
-
-###############################    trace 链路追踪Sleuth和Zipkin   ######################################
-
-  trace-server:
-    build: ./trace-server
-    image: trace-server:springcloud
-    restart: always
-    ports:
-      - "7060:7060"
-    expose:
-      - "7060"
 
 
 

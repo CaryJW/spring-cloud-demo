@@ -101,8 +101,9 @@ services:
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+      SPRING_SLEUTH_WEB_CLIENT_ENABLED: true
       SPRING_ZIPKIN_SENDER_TYPE: web #使用http的方式向zipkin通信，解决zipkin和spring cloud bus冲突
                                                        # 或者 配置zipkin使用rabbitmq进行信息收集 https://cloud.spring.io/spring-cloud-static/Finchley.SR2/single/spring-cloud.html#sleuth-adding-project
 
@@ -133,8 +134,9 @@ services:
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+      SPRING_SLEUTH_WEB_CLIENT_ENABLED: true
       SPRING_ZIPKIN_SENDER_TYPE: web
 
 
@@ -167,8 +169,9 @@ services:
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+      SPRING_SLEUTH_WEB_CLIENT_ENABLED: true
       SPRING_ZIPKIN_SENDER_TYPE: web
 
   feign-server:
@@ -198,8 +201,9 @@ services:
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+      SPRING_SLEUTH_WEB_CLIENT_ENABLED: true
       SPRING_ZIPKIN_SENDER_TYPE: web
 
 ################################           zuul网关        ########################################
@@ -233,8 +237,9 @@ services:
       SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
-      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
+      SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+      SPRING_SLEUTH_WEB_CLIENT_ENABLED: true
       SPRING_ZIPKIN_SENDER_TYPE: web
 
 
@@ -248,17 +253,6 @@ services:
       - "7050:7050"
     expose:
       - "7050"
-
-################################    trace 链路追踪Sleuth和Zipkin   ######################################
-
-  trace-server:
-    build: ./trace-server
-    image: trace-server:springcloud
-    restart: always
-    ports:
-      - "7060:7060"
-    expose:
-      - "7060"
 
 
 

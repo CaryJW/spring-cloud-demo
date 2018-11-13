@@ -21,7 +21,6 @@
     <module>feign-server</module>
     <module>zuul-server</module>
     <module>turbine-server</module>
-    <module>trace-server</module>
   </modules>
 
   <!-- 被继承 -->

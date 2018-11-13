@@ -3,4 +3,3 @@ server:
 spring:
   application:
     name: server-hello
-test: yoyoyo

@@ -42,27 +42,27 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
 
-    <!--&lt;!&ndash;config-client 依赖&ndash;&gt;-->
-    <!--<dependency>-->
-      <!--<groupId>org.springframework.cloud</groupId>-->
-      <!--<artifactId>spring-cloud-starter-config</artifactId>-->
-    <!--</dependency>-->
+    <!--config-client 依赖-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-config</artifactId>
+    </dependency>
 
-    <!--&lt;!&ndash;信息总线&ndash;&gt;-->
-    <!--<dependency>-->
-      <!--<groupId>org.springframework.cloud</groupId>-->
-      <!--<artifactId>spring-cloud-starter-bus-amqp</artifactId>-->
-    <!--</dependency>-->
+    <!--信息总线-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+    </dependency>
 
     <!--获取git文件失败重启的依赖-->
-    <!--<dependency>-->
-      <!--<groupId>org.springframework.retry</groupId>-->
-      <!--<artifactId>spring-retry</artifactId>-->
-    <!--</dependency>-->
-    <!--<dependency>-->
-      <!--<groupId>org.springframework.boot</groupId>-->
-      <!--<artifactId>spring-boot-starter-aop</artifactId>-->
-    <!--</dependency>-->
+    <dependency>
+      <groupId>org.springframework.retry</groupId>
+      <artifactId>spring-retry</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-aop</artifactId>
+    </dependency>
 
     <!--JMX-bean 管理所需依赖-->
     <dependency>
@@ -70,7 +70,13 @@
       <artifactId>jolokia-core</artifactId>
     </dependency>
 
-    <!--zipkin客户端客户端依赖 已经包含服务链路追踪sleuth的依赖-->
+    <!--服务链路追踪sleuth的依赖-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-sleuth</artifactId>
+    </dependency>
+
+    <!--zipkin客户端客户端依赖-->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-zipkin</artifactId>

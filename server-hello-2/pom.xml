@@ -64,7 +64,13 @@
       <artifactId>jolokia-core</artifactId>
     </dependency>
 
-    <!--zipkin客户端客户端依赖 已经包含服务链路追踪sleuth的依赖-->
+    <!--服务链路追踪sleuth的依赖-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-sleuth</artifactId>
+    </dependency>
+
+    <!--zipkin客户端客户端依赖-->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-zipkin</artifactId>
