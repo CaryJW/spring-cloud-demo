@@ -103,7 +103,7 @@ services:
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
-      SPRING_SLEUTH_WEB_CLIENT_ENABLED: true
+      SPRING_SLEUTH_WEB_CLIENT_ENABLED: "true"
       SPRING_ZIPKIN_SENDER_TYPE: web #使用http的方式向zipkin通信，解决zipkin和spring cloud bus冲突
                                                        # 或者 配置zipkin使用rabbitmq进行信息收集 https://cloud.spring.io/spring-cloud-static/Finchley.SR2/single/spring-cloud.html#sleuth-adding-project
 
@@ -136,7 +136,7 @@ services:
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
-      SPRING_SLEUTH_WEB_CLIENT_ENABLED: true
+      SPRING_SLEUTH_WEB_CLIENT_ENABLED: "true"
       SPRING_ZIPKIN_SENDER_TYPE: web
 
 
@@ -171,7 +171,7 @@ services:
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
-      SPRING_SLEUTH_WEB_CLIENT_ENABLED: true
+      SPRING_SLEUTH_WEB_CLIENT_ENABLED: "true"
       SPRING_ZIPKIN_SENDER_TYPE: web
 
   feign-server:
@@ -203,7 +203,7 @@ services:
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
-      SPRING_SLEUTH_WEB_CLIENT_ENABLED: true
+      SPRING_SLEUTH_WEB_CLIENT_ENABLED: "true"
       SPRING_ZIPKIN_SENDER_TYPE: web
 
 ################################           zuul网关        ########################################
@@ -239,7 +239,7 @@ services:
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
-      SPRING_SLEUTH_WEB_CLIENT_ENABLED: true
+      SPRING_SLEUTH_WEB_CLIENT_ENABLED: "true"
       SPRING_ZIPKIN_SENDER_TYPE: web
 
 
