@@ -198,8 +198,6 @@ services:
     build: ./feign-server
     image: feign-server:springcloud
     restart: always
-    ports:
-      - "7041:7041"
     expose:
       - "7041"
     environment:
@@ -265,11 +263,11 @@ services:
       SPRING_ZIPKIN_SENDER_TYPE: web
 
 
-################################          Hystrix 监控面板         ######################################
+################################           Hystrix 监控集群        ######################################
 
-  hystrix-dashboard:
-    build: ./hystrix-dashboard
-    image: hystrix-dashboard-feign:springcloud
+  turbine-server:
+    build: ./turbine-server
+    image: turbine-server:springcloud
     restart: always
     ports:
       - "7050:7050"
@@ -277,11 +275,11 @@ services:
       - "7050"
 
 
-################################           Hystrix 监控集群        ######################################
+################################          Hystrix 监控面板         ######################################
 
-  turbine-server:
-    build: ./turbine-server
-    image: turbine-server:springcloud
+  hystrix-dashboard:
+    build: ./hystrix-dashboard
+    image: hystrix-dashboard-feign:springcloud
     restart: always
     ports:
       - "7060:7060"
