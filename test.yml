@@ -39,6 +39,23 @@ services:
       SPRING_SECURITY_USER_NAME: flyxiaozhu # 设置登陆的用户名和密码 client为单纯的spring-boot程序
       SPRING_SECURITY_USER_PASSWORD: 123456
 
+
+###########################           分布式配置中心         ####################################
+
+  config-server-1:
+    build: ./config-server/
+    image: config-server:springcloud
+    restart: always
+    expose:
+      - "7010"
+    environment:
+      SPRING_PROFILES_ACTIVE: config1
+
+      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig
+      SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo
+      SPRING_CLOUD_CONFIG_LABEL:  master
+
+
 ################################           服务提供者        ########################################
 
   server-hello-1:
