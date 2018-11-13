@@ -2,4 +2,4 @@ server:
   port: 7040
 spring:
   application:
-    name: server-consumer
+    name: ribbon-server

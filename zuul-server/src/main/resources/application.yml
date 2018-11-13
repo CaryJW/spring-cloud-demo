@@ -2,5 +2,5 @@ server:
   port: 7070
 spring:
   application:
-    name: server-zuul
+    name: zuul-server
 

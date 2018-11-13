@@ -2,4 +2,4 @@ server:
   port: 7041
 spring:
   application:
-    name: server-feign
+    name: feign-server
