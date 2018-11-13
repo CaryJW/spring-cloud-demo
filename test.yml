@@ -37,6 +37,8 @@ services:
     build: ./server-hello
     image: server-hello-1:springcloud
     restart: always
+    ports:
+      - "7030:7030"
     expose:
       - "7030"
     environment:
@@ -63,6 +65,17 @@ services:
       SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
       SPRING_ZIPKIN_SENDER_TYPE: web
+
+###############################    trace 链路追踪Sleuth和Zipkin   ######################################
+
+  trace-server:
+    build: ./trace-server
+    image: trace-server:springcloud
+    restart: always
+    ports:
+      - "7060:7060"
+    expose:
+      - "7060"
 
 
 
