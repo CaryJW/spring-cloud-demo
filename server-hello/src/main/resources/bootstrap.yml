@@ -3,4 +3,3 @@ eureka:
     service-url:
       defaultZone: http://eureka-server-1:7000/eureka/,http://eureka-server-2:7001/eureka/
 
-

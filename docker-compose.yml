@@ -30,6 +30,8 @@ services:
     build: ./config-server/
     image: config-server:springcloud
     restart: always
+    ports:
+      - "7010:7010"
     expose:
       - "7010"
     environment:
@@ -42,10 +44,20 @@ services:
 #      SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD:
       SPRING_CLOUD_CONFIG_LABEL:  master                                                    # 分支
 
+      # 信息总线配置 rabbitmq配置
+      SPRING_RABBITMQ_HOST: 192.168.1.250
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
+      SPRING_CLOUD_BUS_ENABLED: "true"
+      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 可以追踪消息总线上的事件传播。可以通过每个服务的/trace的端点来追踪所有事件的发起和消息回执。 --url--/trace 地址访问
+
   config-server-2:
       build: ./config-server/
       image: config-server:springcloud
       restart: always
+      ports:
+        - "7011:7011"
       expose:
         - "7011"
       environment:
@@ -54,6 +66,14 @@ services:
         SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig
         SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo
         SPRING_CLOUD_CONFIG_LABEL:  master # 分支
+
+         # 信息总线配置 rabbitmq配置
+        SPRING_RABBITMQ_HOST: 192.168.1.250
+        SPRING_RABBITMQ_PORT: 5672
+        SPRING_RABBITMQ_USERNAME: flyxiaozhu
+        SPRING_RABBITMQ_PASSWORD: 1120zh.+
+        SPRING_CLOUD_BUS_ENABLED: "true"
+        SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
 
 ###########################           spring-boot-admin        ####################################
@@ -91,14 +111,6 @@ services:
       SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
       SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
       SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
-
-      # 信息总线配置 rabbitmq配置
-      SPRING_RABBITMQ_HOST: 192.168.1.250
-      SPRING_RABBITMQ_PORT: 5672
-      SPRING_RABBITMQ_USERNAME: flyxiaozhu
-      SPRING_RABBITMQ_PASSWORD: 1120zh.+
-      SPRING_CLOUD_BUS_ENABLED: "true"
-      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
