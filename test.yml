@@ -55,6 +55,10 @@ services:
       SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo
       SPRING_CLOUD_CONFIG_LABEL:  master
 
+      # zipkin 客户端配置
+      SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
+      SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
+      SPRING_ZIPKIN_SENDER_TYPE: web
 
 ################################           服务提供者        ########################################
 
@@ -89,7 +93,7 @@ services:
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://trace-server:7060
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
-#      SPRING_ZIPKIN_SENDER_TYPE: web
+      SPRING_ZIPKIN_SENDER_TYPE: web
 
 ###############################    trace 链路追踪Sleuth和Zipkin   ######################################
 
