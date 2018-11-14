@@ -10,8 +10,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableFeignClients
-@EnableCircuitBreaker // 开启断路器功能
+@EnableFeignClients // 开启断路器功能
+@EnableCircuitBreaker   // 开启 hystrix 监控
 @RefreshScope
 public class FeignServerApplication {
 
