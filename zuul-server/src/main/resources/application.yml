@@ -4,3 +4,9 @@ spring:
   application:
     name: zuul-server
 
+# Hystrix 隔离策略配置 https://blog.csdn.net/u010826617/article/details/82260873
+zuul:
+  ribbon-isolation-strategy: thread # 设置Hystrix隔离策略为线程池
+  thread-pool:
+    use-separate-thread-pools: true # 每个路由使用独立的线程池
+

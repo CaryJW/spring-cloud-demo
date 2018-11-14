@@ -4,7 +4,7 @@ spring:
   application:
     name: turbine-server
 turbine:
-  app-config: feign-server            # 配置Eureka中的serviceId列表，表明监控哪些服务，多个使用","分割，默认为default
+  app-config: ribbon-server,feign-server            # 配置Eureka中的serviceId列表，表明监控哪些服务，多个使用","分割，默认为default
   clusterNameExpression: new String("default")      # 参数指定了集群名称为 default，当我们服务数量非常多的时候，可以启动多个 Turbine 服务来构建不同的聚合集群，而该参数可以用来区分这些不同的聚合集群，同时该参数值可以在 Hystrix 仪表盘中用来定位不同的聚合集群，只需要在 Hystrix Stream 的 URL 中通过 cluster 参数来指定
   combine-host-port: true                           # 可以让同一主机上的服务通过主机名与端口号的组合来进行区分，默认情况下会以 host 来区分不同的服务，这会使得在本地调试的时候，本机上的不同服务聚合成一个服务来统计，合并同一个host多个端口的数据
 
