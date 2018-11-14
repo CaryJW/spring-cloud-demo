@@ -24,6 +24,12 @@
 			<artifactId>spring-cloud-starter-netflix-turbine</artifactId>
 		</dependency>
 
+    <!--Hystrix监控-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+    </dependency>
+
     <!--eureka-client 依赖 -->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
