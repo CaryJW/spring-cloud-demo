@@ -64,8 +64,10 @@ http://主机:7070/api-b/test2?token=key # 可以测试 feign 集群
     
 - hystrix dashboard  
     功能：hystrix 监控面板
-> 访问 http://主机:7060/actuator/hystrix.stream
-![img](doc/hystrix-1.png)
+> 访问 http://主机:7060/hystrix
+![img](doc/hystrix-1.png)  
+> 输入  http://主机:7060/turbine.stream
+![img](doc/hystrix-2.png)  
 
 
 
