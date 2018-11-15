@@ -3,29 +3,3 @@ server:
 spring:
   application:
     name: zuul-server
-
-# Hystrix 隔离策略配置 https://blog.csdn.net/u010826617/article/details/82260873
-zuul:
-  ribbon-isolation-strategy: thread     # 设置Hystrix隔离策略为线程池
-  thread-pool:
-    use-separate-thread-pools: true     # 每个路由使用独立的线程池
-  retryable: true                       # 是否开启重试功能
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: true                 # Hystrix是否启用超时时间
-        isolation:
-          thread:
-            timeoutInMilliseconds: 2000 # Hystrix断路器的超时时间，默认是1s，断路器的超时时间需要大于ribbon的超时时间，不然不会触发重试。
-ribbon:
-  MaxAutoRetries: 2                     # 对当前服务的重试次数
-  MaxAutoRetriesNextServer: 0           # 切换相同Server的次数
-  ConnectTimeout: 250                   # ribbon请求连接的超时时间
-  ReadTimeout: 1000                     # 请求处理的超时时间
-  OkToRetryOnAllOperations: true        # 对所有请求操作都进行重试
-  #对当前服务的重试次数（第一次分配给9082的时候，如果404，则再重试MaxAutoRetries次，如果还是404，则切换到其他服务MaxAutoRetriesNextServer决定）
-  ribbon.MaxAutoRetries: 0
-  #切换服务的次数(比如本次请求分配给9082处理，发现404，则切换分配给9081处理，如果还是404，则返回404给客户端）
-  ribbon.MaxAutoRetriesNextServer: 1
