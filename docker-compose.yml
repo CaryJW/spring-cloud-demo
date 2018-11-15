@@ -231,7 +231,7 @@ services:
       image: feign-server-2:springcloud
       restart: always
       expose:
-        - "7042:7042"
+        - "7042"
       environment:
         # 配置中心客户端配置
         SPRING_CLOUD_CONFIG_LABEL: master
