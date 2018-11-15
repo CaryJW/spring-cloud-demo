@@ -22,8 +22,16 @@ public class ServerHello2Application {
     @Value("${server.port}")
     private String port;
 
+    @Value("${test}")
+    private String test;
+
     @RequestMapping("/hello")
     public String like(@RequestParam(value = "name") String name) {
         return "Hello," + name + ".my port is:" + port;
+    }
+
+    @RequestMapping("/test")
+    public String test(){
+        return test;
     }
 }

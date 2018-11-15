@@ -1,4 +1,4 @@
-package com.flyxiaozhu.zuulserver.filter;
+package com.flyxiaozhu.zuulserver.config;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
@@ -21,19 +21,19 @@ public class MyFilter extends ZuulFilter{
     // post： 路由之后
     // error：发送错误调用
     @Override
-    public String filterType() {
+    public String filterType() {// 可以在请求被路由之前调用
         return "pre";
     }
 
     // 过滤的顺序
     @Override
-    public int filterOrder() {
+    public int filterOrder() {// filter执行顺序，通过数字指定 ,优先级为0，数字越大，优先级越低
         return 0;
     }
 
     // 这里可以写逻辑判断，是否要过滤，本文true,永远过滤。
     @Override
-    public boolean shouldFilter() {
+    public boolean shouldFilter() {// 是否执行该过滤器，此处为true，说明需要过滤
         return true;
     }
 

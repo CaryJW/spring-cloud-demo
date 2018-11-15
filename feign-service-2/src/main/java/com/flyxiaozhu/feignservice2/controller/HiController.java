@@ -1,4 +1,4 @@
-package com.flyxiaozhu.feignserver.controller;
+package com.flyxiaozhu.feignservice2.controller;
 
 import com.flyxiaozhu.feignserver.service.ServerHelloService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class HiController {
     }
 
     @RequestMapping("/test")
-    public String test() {
+    public String like(){
         return serverHelloService.outTest();
     }
 
