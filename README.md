@@ -1,5 +1,5 @@
 ## 总架构图
-![img](doc/spring-cloud.jpg)
+![img](doc/spring-cloud.png)
 
 ---
 
