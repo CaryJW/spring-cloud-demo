@@ -1,6 +1,6 @@
 package com.flyxiaozhu.feignservice2.controller;
 
-import com.flyxiaozhu.feignserver.service.ServerHelloService;
+import com.flyxiaozhu.feignservice2.service.ServerHelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
