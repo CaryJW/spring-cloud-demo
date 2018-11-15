@@ -1,4 +1,4 @@
-package com.flyxiaozhu.feignservice2.service;
+package com.flyxiaozhu.feignserver2.service;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
