@@ -27,6 +27,6 @@ public class HiController {
 
     @RequestMapping("/test2")
     public String test2() {
-        return "feign-server-1:" + port;
+        return "feign-server-2:" + port;
     }
 }
