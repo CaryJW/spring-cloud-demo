@@ -1,5 +1,0 @@
-server:
-  port: 7042
-spring:
-  application:
-    name: feign-server

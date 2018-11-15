@@ -19,7 +19,6 @@
     <module>server-hello-2</module>
     <module>ribbon-server</module>
     <module>feign-server</module>
-    <module>feign-server-2</module>
     <module>zuul-server</module>
     <module>turbine-server</module>
     <module>hystrix-dashboard</module>

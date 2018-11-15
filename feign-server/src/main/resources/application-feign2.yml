@@ -1,0 +1,4 @@
+server:
+  port: 7042
+spring:
+  profiles: feign2

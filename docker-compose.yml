@@ -196,11 +196,13 @@ services:
 
   feign-server-1:
     build: ./feign-server
-    image: feign-server-1:springcloud
+    image: feign-server:springcloud
     restart: always
     expose:
       - "7041"
     environment:
+      SPRING_PROFILES_ACTIVE: feign1
+
       # 配置中心客户端配置
       SPRING_CLOUD_CONFIG_LABEL: master
       SPRING_CLOUD_CONFIG_PROFILE: dev
@@ -227,12 +229,14 @@ services:
       SPRING_ZIPKIN_SENDER_TYPE: web
 
   feign-server-2:
-      build: ./feign-server-2
-      image: feign-server-2:springcloud
+      build: ./feign-server
+      image: feign-server:springcloud
       restart: always
       expose:
         - "7042"
       environment:
+        SPRING_PROFILES_ACTIVE: feign2
+
         # 配置中心客户端配置
         SPRING_CLOUD_CONFIG_LABEL: master
         SPRING_CLOUD_CONFIG_PROFILE: dev
