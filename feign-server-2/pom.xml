@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.flyxiaozhu</groupId>
-	<artifactId>feign-service-2</artifactId>
+	<artifactId>feign-server-2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>feign-service-2</name>
+	<name>feign-server-2</name>
 	<description>Demo project for Spring Boot</description>
 
   <parent>

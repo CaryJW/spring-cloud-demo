@@ -227,7 +227,7 @@ services:
       SPRING_ZIPKIN_SENDER_TYPE: web
 
   feign-server-2:
-      build: ./feign-service-2
+      build: ./feign-server-2
       image: feign-server-2:springcloud
       restart: always
       expose:
