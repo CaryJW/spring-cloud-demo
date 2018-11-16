@@ -5,7 +5,7 @@ FROM java:8
 VOLUME /tmp
 
 # 拷贝文件到容器，也可以直接写成ADD eureka-server-0.0.1-SNAPSHOT.jar /eureka-server.jar
-ADD ./target/eureka-server-0.0.1-SNAPSHOT.jar eureka-server.jar
+ADD ./target/eureka-server-1.0-SNAPSHOT.jar eureka-server.jar
 #RUN bash -c 'touch /eureka-server.jar'
 
 ## 开放端口
