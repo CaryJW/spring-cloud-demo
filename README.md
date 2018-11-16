@@ -66,8 +66,12 @@ http://主机:7070/api-b/test2?token=key # 可以测试 feign 集群
     功能：hystrix 监控面板
 > 访问 http://主机:7060/hystrix
 ![img](doc/hystrix-1.png)  
-> 输入  http://主机:7060/turbine.stream
+> 输入  http://主机:7050/turbine.stream
 ![img](doc/hystrix-2.png)  
+
+### 未实现
+- zipkin 服务链路和 hystrix 监控使用的是http方式，可改成使用消息中间件 rabbitmq
+- zipkin 的数据并未持久化
 
 
 
