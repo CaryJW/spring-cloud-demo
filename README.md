@@ -9,7 +9,7 @@ https://windmt.com/2018/04/24/spring-cloud-12-sleuth-zipkin/
 
 ### 环境
 > spring boot 版本：2.0.6.RELEASE  
-mvn环境  
+mvn构建工具  
 docker容器  
 docker-compose
 
