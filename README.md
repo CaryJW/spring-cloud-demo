@@ -17,7 +17,10 @@ docker-compose
 - 构建jar包（根目录下）
 > mvn clean  
 mvn compile  
-mvn package
+mvn package  
+
+或者
+> mvn clean install
 
 - 构建镜像，启动容器
 > docker-compose up -d --build
