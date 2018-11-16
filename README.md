@@ -57,7 +57,8 @@ http://主机:7070/api-b/test?token=key  # 可以测试自动刷新配置
 http://主机:7070/api-b/test2?token=key # 可以测试 feign 集群
 
 - zipkin 服务链路追踪
-> 访问 http://主机:9411  
+> 通过docker运行zipkin服务端   docker run -p 9411:9411 -d openzipkin/zipkin  
+访问 http://主机:9411  
 ![img](doc/zipkin-1.png)
 ![img](doc/zipkin-2.png)
 ![img](doc/zipkin-3.png)
