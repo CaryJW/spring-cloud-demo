@@ -10,7 +10,7 @@ services:
     # on-failure:10 (当容器非正常退出, 最多自动重启10次, 10之后不再重启)
     restart: always                       # 总是重启
     ports:
-      - "7000:7000"
+      - "7000:7000" 
     expose:                               # 暴露端口，只提供容器间访问，不暴露给主机
       - "7000"
     environment:                          # 环境变量
