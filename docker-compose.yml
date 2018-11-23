@@ -38,8 +38,8 @@ services:
       SPRING_PROFILES_ACTIVE: config1
 
       # git 仓库配置
-      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig   # 配置git仓库的地址
-      SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo                                   # git仓库地址下的相对地址，可以配置多个，用,分割。
+      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/spring-boot-admin-demo   # 配置git仓库的地址
+      SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  config                                   # git仓库地址下的相对地址，可以配置多个，用,分割。
 #      SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME:                                             # git仓库的用户和密码
 #      SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD:
       SPRING_CLOUD_CONFIG_LABEL:  master                                                    # 分支
@@ -67,7 +67,7 @@ services:
         SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo
         SPRING_CLOUD_CONFIG_LABEL:  master # 分支
 
-         # 信息总线配置 rabbitmq配置
+        # 信息总线配置 rabbitmq配置
         SPRING_RABBITMQ_HOST: 192.168.1.250
         SPRING_RABBITMQ_PORT: 5672
         SPRING_RABBITMQ_USERNAME: flyxiaozhu
@@ -112,6 +112,14 @@ services:
       SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
       SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
 
+      # 信息总线配置 rabbitmq配置
+      SPRING_RABBITMQ_HOST: 192.168.1.250
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
+      SPRING_CLOUD_BUS_ENABLED: "true"
+      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
+
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
@@ -136,6 +144,14 @@ services:
       SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
       SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
       SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
+
+      # 信息总线配置 rabbitmq配置
+      SPRING_RABBITMQ_HOST: 192.168.1.250
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
+      SPRING_CLOUD_BUS_ENABLED: "true"
+      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
@@ -164,6 +180,14 @@ services:
       SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
       SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
 
+      # 信息总线配置 rabbitmq配置
+      SPRING_RABBITMQ_HOST: 192.168.1.250
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
+      SPRING_CLOUD_BUS_ENABLED: "true"
+      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
+
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
@@ -190,6 +214,14 @@ services:
       SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
       SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
 
+      # 信息总线配置 rabbitmq配置
+      SPRING_RABBITMQ_HOST: 192.168.1.250
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
+      SPRING_CLOUD_BUS_ENABLED: "true"
+      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
+
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
       SPRING_SLEUTH_SAMPLER_PROBABILITY: 1.0
@@ -215,6 +247,14 @@ services:
         SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
         SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
         SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
+
+        # 信息总线配置 rabbitmq配置
+        SPRING_RABBITMQ_HOST: 192.168.1.250
+        SPRING_RABBITMQ_PORT: 5672
+        SPRING_RABBITMQ_USERNAME: flyxiaozhu
+        SPRING_RABBITMQ_PASSWORD: 1120zh.+
+        SPRING_CLOUD_BUS_ENABLED: "true"
+        SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
         # zipkin 客户端配置
         SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411
@@ -243,6 +283,14 @@ services:
       SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: 6
       SPRING_CLOUD_CONFIG_RETRY_MAX-INTERVAL: 2000
       SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.1
+
+      # 信息总线配置 rabbitmq配置
+      SPRING_RABBITMQ_HOST: 192.168.1.250
+      SPRING_RABBITMQ_PORT: 5672
+      SPRING_RABBITMQ_USERNAME: flyxiaozhu
+      SPRING_RABBITMQ_PASSWORD: 1120zh.+
+      SPRING_CLOUD_BUS_ENABLED: "true"
+      SPRING_CLOUD_BUS_TRACE_ENABLED: "true"                        # 开启信息跟踪
 
       # zipkin 客户端配置
       SPRING_ZIPKIN_BASE-URL: http://192.168.1.250:9411

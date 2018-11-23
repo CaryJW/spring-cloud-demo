@@ -74,6 +74,12 @@
       <artifactId>spring-cloud-starter-zipkin</artifactId>
     </dependency>
 
+    <!--信息总线-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+    </dependency>
+
     <!--Spring Retry依赖 路由重试-->
     <dependency>
       <groupId>org.springframework.retry</groupId>

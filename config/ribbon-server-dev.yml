@@ -1,0 +1,25 @@
+eureka:
+  client:
+    healthcheck:
+      enabled: true # 开启健康检查（依赖spring-boot-starter-actuator）
+  instance:
+    lease-expiration-duration-in-seconds: 30 # 发呆时间，即服务续约到期时间（缺省为90s）
+    lease-renewal-interval-in-seconds: 10 # 心跳时间，即服务续约间隔时间（缺省为30s）
+management:
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: "*"  #暴露所有 endpoints
+  endpoint:
+    health:
+      show-details: always
+#ribbon-client:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule    # 负载均衡使用随机策略 缺省为轮询
+
+info:
+  app:
+    name: "@project.name@"
+    description: "@project.description@"
+    version: "@project.version@"

@@ -62,6 +62,12 @@
       <artifactId>jolokia-core</artifactId>
     </dependency>
 
+    <!--信息总线-->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+    </dependency>
+
     <!--服务链路追踪sleuth的依赖-->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
