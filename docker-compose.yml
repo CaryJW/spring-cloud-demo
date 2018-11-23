@@ -87,7 +87,7 @@ services:
     expose:
       - "7020"
     environment:
-      SPRING_PROFILES_ACTIVE: secure # 环境选择 搭配 @Profile("insecure") 使用
+      SPRING_PROFILES_ACTIVE: insecure # 环境选择 搭配 @Profile("secure") 使用
       SPRING_SECURITY_USER_NAME: flyxiaozhu # 设置登陆的用户名和密码 client为单纯的spring-boot程序
       SPRING_SECURITY_USER_PASSWORD: 123456
 
