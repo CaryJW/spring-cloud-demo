@@ -63,8 +63,8 @@ services:
       environment:
         SPRING_PROFILES_ACTIVE: config2
 
-        SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/SpringCloudConfig
-        SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  respo
+        SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/spring-boot-admin-demo
+        SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  config
         SPRING_CLOUD_CONFIG_LABEL:  master # 分支
 
         # 信息总线配置 rabbitmq配置
