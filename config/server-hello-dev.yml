@@ -21,4 +21,4 @@ info:
     version: "@project.version@"
 
 
-test: yes yes yes
+test: no no no
