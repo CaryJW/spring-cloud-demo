@@ -31,7 +31,7 @@ public class ServerHelloApplication {
     }
 
     @RequestMapping("/test")
-    public String test(){
-        return test;
+    public String test() {
+        return test + ":" + port;
     }
 }

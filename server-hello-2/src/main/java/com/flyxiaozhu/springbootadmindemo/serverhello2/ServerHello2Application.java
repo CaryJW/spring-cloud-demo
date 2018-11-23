@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class ServerHello2Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ServerHello2Application.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(ServerHello2Application.class, args);
+    }
 
     @Value("${server.port}")
     private String port;
@@ -31,7 +31,7 @@ public class ServerHello2Application {
     }
 
     @RequestMapping("/test")
-    public String test(){
-        return test;
+    public String test() {
+        return test + ":" + port;
     }
 }
