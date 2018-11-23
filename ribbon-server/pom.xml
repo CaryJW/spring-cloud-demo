@@ -68,12 +68,6 @@
       <artifactId>spring-boot-starter-aop</artifactId>
     </dependency>
 
-    <!--信息总线-->
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-    </dependency>
-
     <!--JMX-bean 管理所需依赖-->
     <dependency>
       <groupId>org.jolokia</groupId>
