@@ -38,7 +38,7 @@ services:
       SPRING_PROFILES_ACTIVE: config1
 
       # git 仓库配置
-      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/spring-boot-admin-demo   # 配置git仓库的地址
+      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/spring-cloud-demo   # 配置git仓库的地址
       SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  config                                   # git仓库地址下的相对地址，可以配置多个，用,分割。
 #      SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME:                                             # git仓库的用户和密码
 #      SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD:
@@ -63,7 +63,7 @@ services:
       environment:
         SPRING_PROFILES_ACTIVE: config2
 
-        SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/spring-boot-admin-demo
+        SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/fiyxiaozhu/spring-cloud-demo
         SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH-PATHS:  config
         SPRING_CLOUD_CONFIG_LABEL:  master # 分支
 
